@@ -22,6 +22,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+  <!-- 高亮工具 google-code-prettify -->
+  <link href="{{ HOME_PATH }}js/code/prettify.css" type="text/css" rel="stylesheet" />
+  
   </head>
 
   <body>
@@ -55,5 +58,20 @@
     </div> <!-- /container -->
 
     {% include JB/analytics %}
+    <script type="text/javascript" src="{{ HOME_PATH }}js/code/prettify.js"></script>
+    <script type="text/javascript" src="{{ HOME_PATH }}js/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $("pre").addClass("prettyprint linenums");
+        prettyPrint();
+        //给外链站点打开新窗口
+        $('.entry a').each(function(){
+          if($(this).attr("href").indexOf("heiniuhaha") == -1){
+            $(this).attr("target", "_blank");
+          }
+        })
+      });
+    </script>
   </body>
 </html>
