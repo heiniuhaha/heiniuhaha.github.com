@@ -10,7 +10,7 @@ tags : [github, pages, blog, jekyll]
 
 1.  ### git命令获取远程文件
 
-		git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git
+		git clone https://github.com/heiniuhaha/heiniuhaha.github.com.git
 	
 2.  ### 定位到目录`heiniu.github.com`
 
@@ -27,5 +27,5 @@ tags : [github, pages, blog, jekyll]
 	 
 5. ### 最后提交git代码
 		git add .
-		git commit . -m 'just another commit'
-		
+		git commit -m 'just another commit'
+		git push origin master
