@@ -28,4 +28,4 @@ tags : [github, pages, blog, jekyll]
 5. ### 最后提交git代码
 		git add .
 		git commit . -m 'just another commit'
-		git push origin master
+		
