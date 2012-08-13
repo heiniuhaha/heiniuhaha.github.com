@@ -9,6 +9,6 @@ http://heiniuhaha.github.com/sitemap.txt
 http://heiniuhaha.github.com/tags.html
 
 http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog
-http://heiniuhaha.github.com/lessons/2012/08/09/google-code-prettify%E5%BA%94%E7%94%A8
+http://heiniuhaha.github.com/lessons/2012/08/09/use-google-code-prettify
 http://heiniuhaha.github.com/lessons/2012/08/07/my-github-first-blog
 http://heiniuhaha.github.com/lessons/2011/12/29/jekyll-introduction

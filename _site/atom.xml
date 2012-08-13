@@ -4,7 +4,7 @@
  <title>黑妞haha-前端开发</title>
  <link href="http://heiniuhaha.github.com/atom.xml" rel="self"/>
  <link href="http://heiniuhaha.github.com"/>
- <updated>2012-08-13T14:08:35+08:00</updated>
+ <updated>2012-08-13T15:15:38+08:00</updated>
  <id>http://heiniuhaha.github.com</id>
  <author>
    <name>宋建敏</name>
@@ -56,10 +56,10 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
  </entry>
  
  <entry>
-   <title>Google Code Prettify应用</title>
-   <link href="http://heiniuhaha.github.com/lessons/2012/08/09/google-code-prettify%E5%BA%94%E7%94%A8"/>
+   <title>Use Google Code Prettify</title>
+   <link href="http://heiniuhaha.github.com/lessons/2012/08/09/use-google-code-prettify"/>
    <updated>2012-08-09T00:00:00+08:00</updated>
-   <id>http://heiniuhaha.github.com/lessons/2012/08/09/google-code-prettify应用</id>
+   <id>http://heiniuhaha.github.com/lessons/2012/08/09/use-google-code-prettify</id>
    <content type="html">&lt;h2 id='jekyll_googlecodeprettify'&gt;jekyll中代码高亮 google-code-prettify&lt;/h2&gt;
 
 &lt;p&gt;看了jekyll的代码高亮插件pygments,觉得配置太复杂,就用了轻量级的google-code-prettify,使用非常方便.&lt;/p&gt;
