@@ -11,33 +11,45 @@ tags : [github, pages, blog, jekyll]
 
 ##命令
 
-1.  ### git命令获取远程文件
+1.  ### git命令获取远程文件 ###
 
 		git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git
 	
-2.  ### 定位到目录`heiniu.github.com`
+2.  ### 定位到目录`heiniu.github.com` ###
 
 		cd .ssh/heiniuhaha.github.com
 		
-3.  ### 使用`rake`命令
+3.  ### 使用`rake`命令 ###
 
 		rake page           # Create a new page.
 		rake post           # Begin a new post in ./_posts
 		rake preview        # Launch preview environment
 	
-4. ### 写文章的时候学习下[markdown语法](https://github.com/othree/markdown-syntax-zhtw/blob/master/basics.md)
+4. ### 写文章的时候学习下[markdown语法](https://github.com/othree/markdown-syntax-zhtw/blob/master/basics.md) ###
 	 如:中文单引号 &#96; 用来标注小块代码,如`github` `jekyll`
 	 
-5. ### 最后提交git代码
+5. ### 最后提交git代码 ###
 		git add .
 		git commit . -m 'just another commit'
 		
+## 日常发布完整命令 ##
+		git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
+		cd .ssh/heiniuhaha.github.com//定位到你blog的目录下
+		git pull origin master //先同步远程文件，后面的参数会自动连接你远程的文件
+		git status //查看本地自己修改了多少文件
+		git add .//添加远程不存在的git文件
+		git commit * -m "what I want told to someone"
+		git push origin master //更新到远程服务器上
 		
-##参考文章
+## 参考文章 ##
+
 [使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
+
 [使用github作为博客引擎](http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html)
+
 [The Quickest Way to Blog with Jekyll.](http://jekyllbootstrap.com/)
 
 
-##附件：git api 总结图
+## 附件：git api 总结图 ##
+链接：[http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png](http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png)
 ![git api 总结图](/assets/themes/twitter/pic/git-api.png)
