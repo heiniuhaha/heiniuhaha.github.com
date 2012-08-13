@@ -1,6 +1,6 @@
 ---
 layout: post
-title : 使用github+pages+jekyll搭建blog环境
+title : 使用github+jekyll+markdown搭建blog环境，完美替代wordpress
 description : 讲讲怎么使用github pages做blog环境,给自己做个记录，也给大家提供教程，分享交流
 category : lessons
 tags : [github, pages, blog, jekyll]
@@ -9,7 +9,17 @@ tags : [github, pages, blog, jekyll]
 
 也来讲讲怎么使用github pages做blog环境
 
-##命令
+## 优点 ##
+
+>空间免费，github托管，稳定又安全，遭遇过空间商跑路的朋友是不是想起伤心往事；
+
+>允许本地服务器调试，脱离网络毫无压力，因为可以使用git命令同步来管理文章，版本控制妥妥的，对技术人员来说，一键恢复，实在是神物；
+
+>还能绑定顶级域名，亲，人家免费空间竟然还允许我们绑域名有木有~~；
+
+>文章用markedown编写，以前遭受排版困扰的亲们是不是很激动；
+
+## 命令 ##
 
 1.  ### git命令获取远程文件 ###
 
