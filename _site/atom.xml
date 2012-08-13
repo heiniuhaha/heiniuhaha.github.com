@@ -4,7 +4,7 @@
  <title>黑妞haha-前端开发</title>
  <link href="http://heiniuhaha.github.com/atom.xml" rel="self"/>
  <link href="http://heiniuhaha.github.com"/>
- <updated>2012-08-13T15:15:38+08:00</updated>
+ <updated>2012-08-13T16:41:09+08:00</updated>
  <id>http://heiniuhaha.github.com</id>
  <author>
    <name>宋建敏</name>
@@ -13,11 +13,39 @@
 
  
  <entry>
-   <title>使用github+pages+jekyll搭建blog环境</title>
+   <title>使用github+jekyll+markdown搭建blog环境，完美替代wordpress</title>
    <link href="http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog"/>
    <updated>2012-08-09T00:00:00+08:00</updated>
    <id>http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog</id>
    <content type="html">&lt;p&gt;也来讲讲怎么使用github pages做blog环境&lt;/p&gt;
+
+&lt;h2 id='id22'&gt;优点&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;空间免费，github托管，稳定又安全，遭遇过空间商跑路的朋友是不是想起伤心往事；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;允许本地服务器调试，脱离网络写文章毫无压力，因为可以使用git命令同步来管理文章，版本控制妥妥的，对技术人员来说，一键恢复，实在是神物；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;还能绑定顶级域名，亲，人家免费空间竟然还允许我们绑域名有木有~~；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;文章用markedown编写，以前遭受排版困扰的亲们是不是很激动；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id='id23'&gt;购买域名&lt;/h2&gt;
+
+&lt;p&gt;可以去&lt;a href='http://www.net.cn'&gt;万网&lt;/a&gt;，这两天正好在促销. &lt;img src='/assets/themes/twitter/pic/net-cn-sales.png' alt='net-cn-sales' /&gt;&lt;/p&gt;
+
+&lt;h2 id='dnspod'&gt;用免费的dnsPod做域名解析&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src='/assets/themes/twitter/pic/dnspod-setting.png' alt='dnspod settings' /&gt;&lt;/p&gt;
+
+&lt;h2 id='id24'&gt;命令&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;
@@ -27,13 +55,13 @@
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id1'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id='id25'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cd .ssh/heiniuhaha.github.com&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id2'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
+&lt;h3 id='id26'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;rake page           # Create a new page.
 rake post           # Begin a new post in ./_posts
@@ -52,7 +80,29 @@ rake preview        # Launch preview environment&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;git add .
 git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content>
+&lt;/ol&gt;
+
+&lt;h2 id='id27'&gt;日常发布完整命令&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;	git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
+	cd .ssh/heiniuhaha.github.com//定位到你blog的目录下
+	git pull origin master //先同步远程文件，后面的参数会自动连接你远程的文件
+	git status //查看本地自己修改了多少文件
+	git add .//添加远程不存在的git文件
+	git commit * -m &amp;quot;what I want told to someone&amp;quot;
+	git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='id28'&gt;参考文章&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href='http://beiyuu.com/github-pages/'&gt;使用Github Pages建独立博客&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html'&gt;使用github作为博客引擎&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://jekyllbootstrap.com/'&gt;The Quickest Way to Blog with Jekyll.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id='git_api_'&gt;附件：git api 总结图&lt;/h2&gt;
+
+&lt;p&gt;链接：&lt;a href='/assets/themes/twitter/pic/git-api.png'&gt;http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png&lt;/a&gt; &lt;img src='/assets/themes/twitter/pic/git-api.png' alt='git api 总结图' /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -104,7 +154,7 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;我尝试了the-program的theme,但是出现一个使用iframe的警告,看了源文件,没有发现可修复的地方,直接放弃这个theme吧.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='theme iframe waring' src='/assets/themes/twitter/img/theme-iframe.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/assets/themes/twitter/img/theme-iframe.png' alt='theme iframe waring' /&gt;&lt;/p&gt;
 
 &lt;h4 id='code'&gt;&lt;strong&gt;code:&lt;/strong&gt;&lt;/h4&gt;
 

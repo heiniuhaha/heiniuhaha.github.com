@@ -13,11 +13,23 @@ tags : [github, pages, blog, jekyll]
 
 >空间免费，github托管，稳定又安全，遭遇过空间商跑路的朋友是不是想起伤心往事；
 
->允许本地服务器调试，脱离网络毫无压力，因为可以使用git命令同步来管理文章，版本控制妥妥的，对技术人员来说，一键恢复，实在是神物；
+>允许本地服务器调试，脱离网络写文章毫无压力，因为可以使用git命令同步来管理文章，版本控制妥妥的，对技术人员来说，一键恢复，实在是神物；
 
 >还能绑定顶级域名，亲，人家免费空间竟然还允许我们绑域名有木有~~；
 
 >文章用markedown编写，以前遭受排版困扰的亲们是不是很激动；
+
+## 购买域名 ##
+可以去[万网](http://www.net.cn)，这两天正好在促销.
+![net-cn-sales](/assets/themes/twitter/pic/net-cn-sales.png)
+
+##用免费的dnsPod做域名解析
+dnspod链接地址[https://www.dnspod.cn/](https://www.dnspod.cn/)
+![dnspod settings](/assets/themes/twitter/pic/dnspod-setting.png)
+
+##github注册和本地电脑jekyll等环境配置
+参考最底下的参考文章，省略。。。
+
 
 ## 命令 ##
 
@@ -41,6 +53,8 @@ tags : [github, pages, blog, jekyll]
 5. ### 最后提交git代码 ###
 		git add .
 		git commit . -m 'just another commit'
+
+
 		
 ## 日常发布完整命令 ##
 		git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
@@ -61,5 +75,5 @@ tags : [github, pages, blog, jekyll]
 
 
 ## 附件：git api 总结图 ##
-链接：[http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png](http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png)
+链接：[http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png](/assets/themes/twitter/pic/git-api.png)
 ![git api 总结图](/assets/themes/twitter/pic/git-api.png)
