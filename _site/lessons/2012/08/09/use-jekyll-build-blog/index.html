@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>使用github+pages+jekyll搭建blog环境</title>
+    <meta name="generator" content="heiniuhaha" />
+    <meta name="keywords" content="黑妞、黑妞haha、heiniuhaha、前端开发、前端架构、javascript、html、css、ajax、用户体验、交互设计" />
+    <meta name="description" content="讲讲怎么使用github pages做blog环境,给自己做个记录，也给大家提供教程，分享交流">
+    <meta name="author" content="宋建敏">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/js/code/prettify.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Le fav and touch icons -->
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Update these with your own images
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <div class="violet-logo">
+                <div class="v-position-1">
+                    <div class="v-petal v-deg-0 v-color-1">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-2">
+                    <div class="v-petal v-deg-60 v-color-2">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-3">
+                    <div class="v-petal v-deg-120 v-color-3">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-4">
+                    <div class="v-petal v-deg-180 v-color-4">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-5">
+                    <div class="v-petal v-deg-240 v-color-5">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-6">
+                    <div class="v-petal v-deg-300 v-color-6">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+            </div><!-- //violet-logo -->
+
+          <a class="brand" href="/">HeiNiu</a><!-- 黑妞haha-前端开发 -->
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/index.html">Index</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>使用github+pages+jekyll搭建blog环境 <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <div class="entry"><p>也来讲讲怎么使用github pages做blog环境</p>
+
+<ol>
+<li>
+<h3 id='git'>git命令获取远程文件</h3>
+
+<pre><code>git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git</code></pre>
+</li>
+
+<li>
+<h3 id='id1'>定位到目录<code>heiniu.github.com</code></h3>
+
+<pre><code>cd .ssh/heiniuhaha.github.com</code></pre>
+</li>
+
+<li>
+<h3 id='id2'>使用<code>rake</code>命令</h3>
+
+<pre><code>rake page           # Create a new page.
+rake post           # Begin a new post in ./_posts
+rake preview        # Launch preview environment</code></pre>
+</li>
+
+<li>
+<h3 id='markdown'>写文章的时候学习下<a href='https://github.com/othree/markdown-syntax-zhtw/blob/master/basics.md'>markdown语法</a></h3>
+
+<p>如:中文单引号 &#96; 用来标注小块代码,如<code>github</code> <code>jekyll</code></p>
+</li>
+
+<li>
+<h3 id='git'>最后提交git代码</h3>
+
+<pre><code>git add .
+git commit . -m &#39;just another commit&#39;</code></pre>
+</li>
+</ol></div>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/lessons/2012/08/09/google-code-prettify%E5%BA%94%E7%94%A8" title="Google Code Prettify应用">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>09 August 2012</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#github-ref">github <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#pages-ref">pages <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#blog-ref">blog <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#jekyll-ref">jekyll <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 宋建敏 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+    <a class="v-fork-me" href="https://github.com/heiniuhaha/heiniuhaha.github.com" target="_blank" rel="nofollow">
+        <img src="/assets/themes/twitter/img/forkme.png" alt="Fork me on GitHub">
+    </a>
+
+    
+
+    <script type="text/javascript" src="/assets/themes/twitter/js/code/prettify.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+          $("pre").addClass("prettyprint linenums");
+          prettyPrint();
+          $('.entry a').each(function(){
+            if($(this).attr("href").indexOf("heiniuhaha") == -1){
+              $(this).attr("target", "_blank");
+            }
+          })
+        });
+      </script>
+  </body>
+</html>
+

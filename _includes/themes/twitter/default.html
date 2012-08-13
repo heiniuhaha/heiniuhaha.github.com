@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="generator" content="heiniuhaha" />
+    <meta name="keywords" content="黑妞、黑妞haha、heiniuhaha、前端开发、前端架构、javascript、html、css、ajax、用户体验、交互设计" />
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/js/code/prettify.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Le fav and touch icons -->
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Update these with your own images
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <div class="violet-logo">
+                <div class="v-position-1">
+                    <div class="v-petal v-deg-0 v-color-1">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-2">
+                    <div class="v-petal v-deg-60 v-color-2">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-3">
+                    <div class="v-petal v-deg-120 v-color-3">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-4">
+                    <div class="v-petal v-deg-180 v-color-4">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-5">
+                    <div class="v-petal v-deg-240 v-color-5">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+                <div class="v-position-6">
+                    <div class="v-petal v-deg-300 v-color-6">
+                        <div class="v-petal-top">
+                        </div>
+                        <div class="v-petal-left">
+                            <div class="v-petal-left-det">
+                            </div>
+                        </div>
+                        <div class="v-petal-right">
+                            <div class="v-petal-right-det">
+                            </div>
+                        </div>
+                    </div><!-- v-petal -->
+                </div>
+            </div><!-- //violet-logo -->
+
+          <a class="brand" href="{{ HOME_PATH }}">HeiNiu</a><!-- {{ site.title }} -->
+          <ul class="nav">
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <footer>
+        <p>&copy; {{ site.author.name }} 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+    <a class="v-fork-me" href="https://github.com/heiniuhaha/heiniuhaha.github.com" target="_blank" rel="nofollow">
+        <img src="/assets/themes/twitter/img/forkme.png" alt="Fork me on GitHub">
+    </a>
+
+    {% include JB/analytics %}
+
+    <script type="text/javascript" src="/assets/themes/twitter/js/code/prettify.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+          $("pre").addClass("prettyprint linenums");
+          prettyPrint();
+          $('.entry a').each(function(){
+            if($(this).attr("href").indexOf("heiniuhaha") == -1){
+              $(this).attr("target", "_blank");
+            }
+          })
+        });
+      </script>
+  </body>
+</html>
