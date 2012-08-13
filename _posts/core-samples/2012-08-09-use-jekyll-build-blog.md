@@ -9,6 +9,8 @@ tags : [github, pages, blog, jekyll]
 
 也来讲讲怎么使用github pages做blog环境
 
+##命令
+
 1.  ### git命令获取远程文件
 
 		git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git
@@ -30,3 +32,12 @@ tags : [github, pages, blog, jekyll]
 		git add .
 		git commit . -m 'just another commit'
 		
+		
+##参考文章
+[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
+[使用github作为博客引擎](http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html)
+[The Quickest Way to Blog with Jekyll.](http://jekyllbootstrap.com/)
+
+
+##附件：git api 总结图
+![git api 总结图](/assets/themes/twitter/pic/git-api.png)
