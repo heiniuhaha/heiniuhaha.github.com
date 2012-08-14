@@ -116,12 +116,25 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
 	  // The module code goes here
 	
 	});
+	
+	/*
+	模块代码需要用 define 回调包起来：id 与 dependencies 参数是可以省略的
+	id 用来显式指定模块 ID。当你的项目上线，所有的模块都合并到了一个文件中，如果不显示指定， SeaJS 就无从知道哪个模块是哪个了。在开发的时候，一般用不到它。
+	dependencies 也是如此。它列出了当前模块所依赖的模块，在开发的时候是不需要写明的。 SeaJS 会检查你的模块回调函数，找到所有的 require 语句，从而得到你的模块的所有依赖。 在真正 require 当前模块时，会先去请求这个模块的依赖，加载完毕，再去初始化当前的模块。
+	*/
+	define(id, dependencies, function(require, exports, module) {
+	    // module code.
+	});
 
 ###require
 	/*
 	require 是一个方法，用来获取其他模块提供的接口。
 	require 接受 模块标识 作为唯一参数
-	require 的参数值必须是字符串直接量,require("my-module");
+	
+	模块依赖解析，靠的是三个重要的规则：
+		不能重命名 require
+		不能覆盖 require
+		require 的参数必须是字符串字面量，不可以 require(foo()) 或者 require(bar)， 也不可以是 require(should_be_a ? 'a' : 'b')。	参数值必须是字符串直接量,如 require("my-module");
 	*/
 	define(function(require) {
 	  var a = require('./a');
@@ -132,12 +145,6 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
 	/*
 	require.async(id, callback)
 	async 方法可用来异步加载模块，并在加载完成后执行指定回调。
-	
-	推荐使用 require.async 来进行条件加载，从静态分析的角度来看，这个模块同时依赖 play 和 work 两个模块，加载器会把这两个模块文件都下载下来。
-		if (todayIsWeekend)
-		  require.async("play");
-		else
-		  require.async("work");	
 	*/
 	define(function(require, exports, module) {
 	  // load one module

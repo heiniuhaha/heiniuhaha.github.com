@@ -91,6 +91,25 @@ jQuery 插件都依赖 jQuery 模块，为了加载 jQuery 插件，首先得将
 	  ]
 	});	
 
+##条件加载
+
+第一种：把依赖的模块都在 define 头部手工声明，不再依赖 SeaJS 的自动解析功能。这个模块同时依赖 play 和 work 两个模块，加载器会把这两个模块文件都下载下来。如果需要在 require 模块之后串行执行代码，那么只能用这个方式。
+
+	define(['play', 'work'], function(require, exports) {
+		 //是出去玩，还是工作？
+	    var choice = require(condition() ? 'play' : 'work');
+		//选择的难度
+	    console.log(choice.hard());
+	});
+
+第二种：使用 require.async 来进行条件加载，从静态分析的角度来看，require.async适合需要执行动态加载的模块很大（比如大量 json 数据），不适合都下载下来。但是require.async 方式加载的模块，不能打包工具找到，自然也不能被打包进上线的 js 中；而前一种方式可以。
+
+	define(function(require, exports) {
+	    require.async(condition() ? 'play' : 'work', function(choice) {
+	        console.log(choice.hard());
+	    });
+	});
+	
 
 ##参考文档
 [直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
