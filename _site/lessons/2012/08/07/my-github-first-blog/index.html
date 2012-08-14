@@ -203,11 +203,11 @@
 
 <div class="row">
   <div class="span8">
-    <div class="entry"><h2 id='themes'>应用themes发现的问题</h2>
+    <div class="v-entry"><h2 id='themes'>应用themes发现的问题</h2>
 
 <p>我尝试了the-program的theme,但是出现一个使用iframe的警告,看了源文件,没有发现可修复的地方,直接放弃这个theme吧.</p>
 
-<p><img src='/assets/themes/twitter/img/theme-iframe.png' alt='theme iframe waring' /></p>
+<p><img alt='theme iframe waring' src='/assets/themes/twitter/img/theme-iframe.png' /></p>
 
 <h4 id='code'><strong>code:</strong></h4>
 
@@ -271,7 +271,7 @@
      
     	<li><a href="/tags.html#blog-ref">blog <span>2</span></a></li>
      
-    	<li><a href="/tags.html#heiniuhaha-ref">heiniuhaha <span>1</span></a></li>
+    	<li><a href="/tags.html#heiniuhaha,jekyll,theme-ref">heiniuhaha,jekyll,theme <span>1</span></a></li>
     
   
 
@@ -303,7 +303,7 @@
     <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
         $(function(){
-          $("pre").addClass("prettyprint linenums");
+          $("pre").addClass("prettyprint");//linenums 数字
           prettyPrint();
           $('.entry a').each(function(){
             if($(this).attr("href").indexOf("heiniuhaha") == -1){

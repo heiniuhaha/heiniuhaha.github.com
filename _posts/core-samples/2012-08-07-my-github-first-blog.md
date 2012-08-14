@@ -2,7 +2,7 @@
 layout: post
 category : lessons
 description : 应用推荐的themes发现的问题，我尝试了the-program的theme,但是出现一个使用iframe的警告,看了源文件,没有发现可修复的地方,直接放弃这个theme吧.
-tags : [github, pages, blog, heiniuhaha]
+tags : [github, pages, blog, heiniuhaha,jekyll,theme]
 ---
 {% include JB/setup %}
 

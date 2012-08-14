@@ -6,36 +6,35 @@ group: navigation
 ---
 {% include JB/setup %}
 
-    <div class="content fn-clear">
-        <div class="content-cnt">
-        <div class="ui-grid-25 ui-grid-right content-top">	
-        	<div class="ui-grid-23 violet-post">
-                <div class="violet-post-det fn-clear">
-            <section class="ui-grid-16 violet-journal">
-                <h4 class="v-section-tit">Last Journal</h4>
-                {% for rpost in site.posts limit:5 %}
-                <article class="v-excerpt fn-clear">
-                    <div class="ui-grid-7 ui-grid-bottom">
-                        <h3 class="v-excerpt-title"><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
-                        <p class="v-date"><span>&#8227;</span><time pubdate="{{ rpost.date | date_to_utc | date: '%Y-%m-%d' }}">{{ rpost.date | date_to_utc | date: "%Y-%m-%d" }}</time></p>
-                    </div>
-                    <div class="ui-grid-9 ui-grid-right v-excerpt-det">
-                        <p>{{ rpost.description }}</p>
-                        <p class="v-more"><a href="{{ rpost.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
-                    </div>
-                </article><!-- //v-post-excerpt -->
-                {% endfor %}
-                {% for npost in site.posts limit:3 offset:5  %}             
-                <article class="v-post-list fn-clear">
-                    <p class="v-date"><span>&#8227;</span><time pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}">{{ npost.date | date_to_utc | date: "%Y-%m-%d" }}</time></p>
-                    <h3 class="v-post-title"><a href="{{ npost.url }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></h3>
-                </article><!-- //v-post-list -->
-                {% endfor %}
-            </div><!-- //Journal -->
-            
-            {% include JB/aside.html %}
+
+<div class="content-cnt">
+<div class="ui-grid-25 ui-grid-right content-top">	
+	<div class="ui-grid-23 violet-post clearfix">
+        <div class="violet-post-det clearfix">
+    <div class="ui-grid-16 violet-journal">
+        <h4 class="v-section-tit">Last Journal</h4>
+        {% for rpost in site.posts limit:5 %}
+        <article class="v-excerpt clearfix">
+            <div class="ui-grid-7 ui-grid-bottom">
+                <h3 class="v-excerpt-title"><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
+                <p class="v-date"><span>&#8227;</span><time pubdate="{{ rpost.date | date_to_utc | date: '%Y-%m-%d' }}">{{ rpost.date | date_to_utc | date: "%Y-%m-%d" }}</time></p>
             </div>
+            <div class="ui-grid-9 ui-grid-right v-excerpt-det">
+                <p>{{ rpost.description }}</p>
+                <p class="v-more"><a href="{{ rpost.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
             </div>
-        </div>
-        </div>
-    </section><!-- //content -->
+        </article><!-- //v-post-excerpt -->
+        {% endfor %}
+        {% for npost in site.posts limit:3 offset:5  %}             
+        <article class="v-post-list fn-clear">
+            <p class="v-date"><span>&#8227;</span><time pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}">{{ npost.date | date_to_utc | date: "%Y-%m-%d" }}</time></p>
+            <h3 class="v-post-title"><a href="{{ npost.url }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></h3>
+        </article><!-- //v-post-list -->
+        {% endfor %}
+    </div><!-- //Journal -->
+    
+    {% include JB/aside.html %}
+    </div>
+    </div>
+</div>
+</div>

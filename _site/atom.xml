@@ -4,7 +4,7 @@
  <title>黑妞haha-前端开发</title>
  <link href="http://heiniuhaha.github.com/atom.xml" rel="self"/>
  <link href="http://heiniuhaha.github.com"/>
- <updated>2012-08-13T16:41:09+08:00</updated>
+ <updated>2012-08-14T11:09:45+08:00</updated>
  <id>http://heiniuhaha.github.com</id>
  <author>
    <name>宋建敏</name>
@@ -13,13 +13,154 @@
 
  
  <entry>
+   <title>seajs快速参考</title>
+   <link href="http://heiniuhaha.github.com/seajs/2012/08/13/seajs-cheet-sheet"/>
+   <updated>2012-08-13T00:00:00+08:00</updated>
+   <id>http://heiniuhaha.github.com/seajs/2012/08/13/seajs-cheet-sheet</id>
+   <content type="html">&lt;h2 id='seajs'&gt;seajs快速参考&lt;/h2&gt;
+
+&lt;p&gt;该页面列举了 SeaJS 中的常用 API。只要掌握这些方法，就可以娴熟地进行模块化开发。&lt;/p&gt;
+
+&lt;h3 id='seajsconfig'&gt;seajs.config&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;seajs.config({
+  alias: {
+    &amp;#39;es5-safe&amp;#39;: &amp;#39;es5-safe/0.9.2/es5-safe&amp;#39;,
+    &amp;#39;json&amp;#39;: &amp;#39;json/1.0.1/json&amp;#39;,
+    &amp;#39;jquery&amp;#39;: &amp;#39;jquery/1.7.2/jquery&amp;#39;
+  },
+  preload: [
+    Function.prototype.bind ? &amp;#39;&amp;#39; : &amp;#39;es5-safe&amp;#39;,
+    this.JSON ? &amp;#39;&amp;#39; : &amp;#39;json&amp;#39;
+  ]
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='seajsuse'&gt;seajs.use&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;seajs.use(&amp;#39;./a&amp;#39;);
+
+seajs.use(&amp;#39;./a&amp;#39;, function(a) {
+  a.doSomething();
+});
+
+seajs.use([&amp;#39;./a&amp;#39;, &amp;#39;./b&amp;#39;], function(a, b) {
+  a.doSomething();
+  b.doSomething();
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='define'&gt;define&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;define(function(require, exports, module) {
+
+  // The module code goes here
+
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='require'&gt;require&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;define(function(require) {
+  var a = require(&amp;#39;./a&amp;#39;);
+  a.doSomething();
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='requireasync'&gt;require.async&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;define(function(require, exports, module) {
+  // load one module
+  require.async(&amp;#39;./b&amp;#39;, function(b) {
+    b.doSomething();
+  });
+
+  // load multiple modules
+  require.async([&amp;#39;./c&amp;#39;, &amp;#39;./d&amp;#39;], function(c, d) {
+    // do something
+  });
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='exports'&gt;exports&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;define(function(require, exports) {
+  // snip...
+  exports.foo = &amp;#39;bar&amp;#39;;
+  exports.doSomething = function() {};
+});
+module.exports
+
+define(function(require, exports, module) {
+  // snip...
+  module.exports = {
+    name: &amp;#39;a&amp;#39;,
+    doSomething: function() {};
+  };
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这 7 个接口是最常用的，要牢记于心。&lt;/p&gt;
+
+&lt;h3 id='id836'&gt;可写成如下&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;seajs.config({
+  alias: {
+    &amp;#39;jquery&amp;#39;: &amp;#39;http://modules.seajs.org/jquery/1.7.2/jquery.js&amp;#39;
+  }
+});
+
+define(&amp;#39;hi&amp;#39;, function(require, exports) {
+    exports.sayHi = function() {
+        alert(&amp;#39;hi&amp;#39;)
+    } 
+})
+
+seajs.use([&amp;#39;jquery&amp;#39;, &amp;#39;hi&amp;#39;], function($, h) {
+    $(&amp;#39;#beautiful-sea&amp;#39;).click(h.sayHi)
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='id837'&gt;实际使用中&lt;/h2&gt;
+
+&lt;p&gt;在工程内使用seajs，以前引用的插件、模块也都要用define的语法重新进行封装，比较麻烦，老代码可以不修改，继续使用就好。但强烈建立花点时间都修改成 CMD 模块，这样对以后的维护，以及页面性能很有好处。不然以后修改起来估计会更麻烦。&lt;/p&gt;
+
+&lt;p&gt;其实可以混用的，比如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;underscore.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;backbone.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script src=&amp;quot;sea.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样，常用的 jquery 等类库，依旧是传统的用法，用全局变量引用就好，通过同步引入的方式，也不会有依赖顺序问题。 自己的代码，都按照 CMD 规范写成模块的形式。&lt;/p&gt;
+
+&lt;p&gt;其实上面的方式挺好的，特别对于要兼容老代码的情况的。 推荐还是都彻底模块化，看起来要多写一些 require，但值得，因为这样可以让每个模块自身的信息完整，从而减少对 环境的依赖，对后续的可维护性很好益处。&lt;/p&gt;
+
+&lt;h2 id='seajsapi'&gt;seajs官方api&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href='http://seajs.org/docs/#api'&gt;详细官方文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/240'&gt;模块系统&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/242'&gt;CMD 模块定义规范&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/258'&gt;模块标识&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/259'&gt;require 书写约定&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/260'&gt;模块加载器&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/262'&gt;配置&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/265'&gt;常用插件&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/281'&gt;打包部署&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='https://github.com/seajs/seajs/issues/266'&gt;快速参考&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>使用github+jekyll+markdown搭建blog环境，完美替代wordpress</title>
    <link href="http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog"/>
    <updated>2012-08-09T00:00:00+08:00</updated>
    <id>http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog</id>
    <content type="html">&lt;p&gt;也来讲讲怎么使用github pages做blog环境&lt;/p&gt;
 
-&lt;h2 id='id22'&gt;优点&lt;/h2&gt;
+&lt;h2 id='id829'&gt;优点&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;空间免费，github托管，稳定又安全，遭遇过空间商跑路的朋友是不是想起伤心往事；&lt;/p&gt;
@@ -37,15 +178,19 @@
 &lt;p&gt;文章用markedown编写，以前遭受排版困扰的亲们是不是很激动；&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id='id23'&gt;购买域名&lt;/h2&gt;
+&lt;h2 id='id830'&gt;购买域名&lt;/h2&gt;
 
-&lt;p&gt;可以去&lt;a href='http://www.net.cn'&gt;万网&lt;/a&gt;，这两天正好在促销. &lt;img src='/assets/themes/twitter/pic/net-cn-sales.png' alt='net-cn-sales' /&gt;&lt;/p&gt;
+&lt;p&gt;可以去&lt;a href='http://www.net.cn'&gt;万网&lt;/a&gt;，这两天正好在促销. &lt;img alt='net-cn-sales' src='/assets/themes/twitter/pic/net-cn-sales.png' /&gt;&lt;/p&gt;
 
 &lt;h2 id='dnspod'&gt;用免费的dnsPod做域名解析&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src='/assets/themes/twitter/pic/dnspod-setting.png' alt='dnspod settings' /&gt;&lt;/p&gt;
+&lt;p&gt;dnspod链接地址&lt;a href='https://www.dnspod.cn/'&gt;https://www.dnspod.cn/&lt;/a&gt; &lt;img alt='dnspod settings' src='/assets/themes/twitter/pic/dnspod-setting.png' /&gt;&lt;/p&gt;
 
-&lt;h2 id='id24'&gt;命令&lt;/h2&gt;
+&lt;h2 id='githubjekyll'&gt;github注册和本地电脑jekyll等环境配置&lt;/h2&gt;
+
+&lt;p&gt;参考最底下的参考文章，省略。。。&lt;/p&gt;
+
+&lt;h2 id='id831'&gt;命令&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;
@@ -55,13 +200,13 @@
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id25'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id='id832'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cd .ssh/heiniuhaha.github.com&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id26'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
+&lt;h3 id='id833'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;rake page           # Create a new page.
 rake post           # Begin a new post in ./_posts
@@ -82,7 +227,7 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id='id27'&gt;日常发布完整命令&lt;/h2&gt;
+&lt;h2 id='id834'&gt;日常发布完整命令&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;	git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
 	cd .ssh/heiniuhaha.github.com//定位到你blog的目录下
@@ -92,7 +237,7 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 	git commit * -m &amp;quot;what I want told to someone&amp;quot;
 	git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id28'&gt;参考文章&lt;/h2&gt;
+&lt;h2 id='id835'&gt;参考文章&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href='http://beiyuu.com/github-pages/'&gt;使用Github Pages建独立博客&lt;/a&gt;&lt;/p&gt;
 
@@ -102,7 +247,7 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id='git_api_'&gt;附件：git api 总结图&lt;/h2&gt;
 
-&lt;p&gt;链接：&lt;a href='/assets/themes/twitter/pic/git-api.png'&gt;http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png&lt;/a&gt; &lt;img src='/assets/themes/twitter/pic/git-api.png' alt='git api 总结图' /&gt;&lt;/p&gt;</content>
+&lt;p&gt;链接：&lt;a href='/assets/themes/twitter/pic/git-api.png'&gt;http://www.heiniuhaha.com/assets/themes/twitter/pic/git-api.png&lt;/a&gt; &lt;img alt='git api 总结图' src='/assets/themes/twitter/pic/git-api.png' /&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -154,7 +299,7 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;我尝试了the-program的theme,但是出现一个使用iframe的警告,看了源文件,没有发现可修复的地方,直接放弃这个theme吧.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/assets/themes/twitter/img/theme-iframe.png' alt='theme iframe waring' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='theme iframe waring' src='/assets/themes/twitter/img/theme-iframe.png' /&gt;&lt;/p&gt;
 
 &lt;h4 id='code'&gt;&lt;strong&gt;code:&lt;/strong&gt;&lt;/h4&gt;
 
