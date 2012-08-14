@@ -227,6 +227,60 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
     });
 
 
+###模块化后的js写法
+	define(function(require, exports, module) = {
+	 
+	    //原jquery.js代码...
+	 
+	    module.exports = $.noConflict(true);
+	});
+	 
+	//init.js
+	define(function(require, exports, module) = {
+	    var $ = require('jquery');
+	    var m1 = require('module1');
+	     
+	    exports.initPage = function() {
+	        $('.content').html(m1.run());    
+	    }
+	});
+	 
+	//module1.js
+	define(function(require, exports, module) = {
+	    var $ = require('jquery');
+	    var m2 = require('module2');
+	    var m3 = require('module3');
+	     
+	    exports.run = function() {
+	        return $.merge(['module1'], $.merge(m2.run(), m3.run()));    
+	    }
+	});
+	 
+	//module2.js
+	define(function(require, exports, module) = {
+	    exports.run = function() {
+	        return ['module2'];
+	    }
+	});
+	 
+	//module3.js
+	define(function(require, exports, module) = {
+	    var $ = require('jquery');
+	    var m4 = require('module4');
+	     
+	    exports.run = function() {
+	        return $.merge(['module3'], m4.run());    
+	    }
+	});
+	 
+	//module4.js
+	define(function(require, exports, module) = {
+	    exports.run = function() {
+	        return ['module4'];
+	    }
+	});
+
+
 ##实际使用中    
 在工程内使用seajs，以前引用的插件、模块也都要用define的语法重新进行封装，比较麻烦，老代码可以不修改，继续使用就好。但强烈建立花点时间都修改成 CMD 模块，这样对以后的维护，以及页面性能很有好处。不然以后修改起来估计会更麻烦。
 
@@ -267,3 +321,6 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
 [打包部署](https://github.com/seajs/seajs/issues/281)
 
 [快速参考](https://github.com/seajs/seajs/issues/266)
+
+##seaja+jquery
+[直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
