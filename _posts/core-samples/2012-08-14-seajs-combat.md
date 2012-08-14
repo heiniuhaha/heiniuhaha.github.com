@@ -71,6 +71,28 @@ jQuery 插件都依赖 jQuery 模块，为了加载 jQuery 插件，首先得将
 	})
 完整范例：[http://seajs.org/test/issues/auto-transport/test.html](http://seajs.org/test/issues/auto-transport/test.html)
 
+##seajs里版本号和时间戳问题
+用 seajs 组织项目，上线后，经常需要更新特定文件或所有文件的时间戳，以清空浏览器缓存。最简单的方式是：
+
+	//用来维护 jquery 等类库模块的版本号
+	seajs.config({
+	  alias: {
+	    'jquery': 'jquery/1.6.2/jquery',
+	    'backbone': 'backbone/0.5.1/backbone',
+	    'a': 'a.js?20110801',
+	    'b': 'b.js?20110801'
+	  }
+	});	
+	
+	//利用 map,批量更新时间戳是最方便的
+	seajs.config({
+	  'map': [
+	    [ /^(.*\.(?:css|js))(.*)$/i, '$1?20110801' ]
+	  ]
+	});	
+
+
 ##参考文档
 [直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
-[seajs中文版源码](http://www.heiniuhaha.com/api/sea-zh.js)
+[seajs中文版源码](http://www.heiniuhaha.com/file/sea-zh.js)
+[SeaJS 里版本号和时间戳管理的最佳实践](http://lifesinger.wordpress.com/2011/08/01/best-practice-of-version-management/) 墙外
