@@ -17,7 +17,7 @@ tags : [seajs, 模块化, 代码组织, 性能优化, 实战经验]
 	
 	seajs.use('init')
 	
-	init.js
+	//init.js
 	define(function(require, exports) {
 		var $ = jQuery = require('jquery');
 		
