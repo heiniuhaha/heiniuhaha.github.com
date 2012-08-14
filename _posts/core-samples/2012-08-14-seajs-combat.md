@@ -73,3 +73,4 @@ jQuery 插件都依赖 jQuery 模块，为了加载 jQuery 插件，首先得将
 
 ##参考文档
 [直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
+[seajs中文版源码](http://www.heiniuhaha.com/api/sea-zh.js)
