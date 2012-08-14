@@ -2,7 +2,7 @@
 layout: post
 category : lessons
 description : 看了jekyll的代码高亮插件pygments,觉得配置太复杂,就用了轻量级的google-code-prettify,使用非常方便.
-tags : [google-code-prettify,代码高亮,highlight,jekyll]
+tags : [google-code-prettify, 代码高亮, highlight, jekyll]
 ---
 {% include JB/setup %}
 
