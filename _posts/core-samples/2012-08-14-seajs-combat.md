@@ -1,7 +1,7 @@
 ---
 layout: post
-title : seajs快速参考
-description : 学习使用seajs+jquery进行模块化开发
+title : seajs实战参考
+description : 该页面列举了 SeaJS 中的常用实战过程中的问题，如全局接口，时间戳管理等实战性问题。只要掌握这些方法，就可以娴熟地开始对你的网站进行模块化开发了。
 category : seajs
 tags : [seajs, 模块化, 代码组织, 性能优化, 实战经验]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title : seajs快速参考
-description : 学习使用seajs+jquery进行模块化开发
+description : 学习使用seajs+jquery进行模块化开发，该页面列举了 SeaJS 中的常用 API。只要掌握这些方法，就可以娴熟地进行模块化开发。
 category : seajs
 tags : [seajs, 模块化, 代码组织, 性能优化]
 ---
