@@ -322,5 +322,6 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
 
 [快速参考](https://github.com/seajs/seajs/issues/266)
 
-##seaja+jquery
-[直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
+##非官方相关blog推荐
+[seajs所为何](http://cyj.me/why-seajs/zh/)
+[使用SeaJS实现模块化JavaScript开发](http://www.cnblogs.com/leoo2sk/archive/2011/06/27/write-javascript-with-seajs.html)
