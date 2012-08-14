@@ -4,7 +4,7 @@
  <title>黑妞haha-前端开发</title>
  <link href="http://heiniuhaha.github.com/atom.xml" rel="self"/>
  <link href="http://heiniuhaha.github.com"/>
- <updated>2012-08-14T11:09:45+08:00</updated>
+ <updated>2012-08-14T11:18:28+08:00</updated>
  <id>http://heiniuhaha.github.com</id>
  <author>
    <name>宋建敏</name>
@@ -96,7 +96,7 @@ define(function(require, exports, module) {
 
 &lt;p&gt;这 7 个接口是最常用的，要牢记于心。&lt;/p&gt;
 
-&lt;h3 id='id836'&gt;可写成如下&lt;/h3&gt;
+&lt;h3 id='id890'&gt;可写成如下&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;seajs.config({
   alias: {
@@ -114,7 +114,7 @@ seajs.use([&amp;#39;jquery&amp;#39;, &amp;#39;hi&amp;#39;], function($, h) {
     $(&amp;#39;#beautiful-sea&amp;#39;).click(h.sayHi)
 });&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id837'&gt;实际使用中&lt;/h2&gt;
+&lt;h2 id='id891'&gt;实际使用中&lt;/h2&gt;
 
 &lt;p&gt;在工程内使用seajs，以前引用的插件、模块也都要用define的语法重新进行封装，比较麻烦，老代码可以不修改，继续使用就好。但强烈建立花点时间都修改成 CMD 模块，这样对以后的维护，以及页面性能很有好处。不然以后修改起来估计会更麻烦。&lt;/p&gt;
 
@@ -160,7 +160,7 @@ seajs.use([&amp;#39;jquery&amp;#39;, &amp;#39;hi&amp;#39;], function($, h) {
    <id>http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog</id>
    <content type="html">&lt;p&gt;也来讲讲怎么使用github pages做blog环境&lt;/p&gt;
 
-&lt;h2 id='id829'&gt;优点&lt;/h2&gt;
+&lt;h2 id='id883'&gt;优点&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;空间免费，github托管，稳定又安全，遭遇过空间商跑路的朋友是不是想起伤心往事；&lt;/p&gt;
@@ -178,7 +178,7 @@ seajs.use([&amp;#39;jquery&amp;#39;, &amp;#39;hi&amp;#39;], function($, h) {
 &lt;p&gt;文章用markedown编写，以前遭受排版困扰的亲们是不是很激动；&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id='id830'&gt;购买域名&lt;/h2&gt;
+&lt;h2 id='id884'&gt;购买域名&lt;/h2&gt;
 
 &lt;p&gt;可以去&lt;a href='http://www.net.cn'&gt;万网&lt;/a&gt;，这两天正好在促销. &lt;img alt='net-cn-sales' src='/assets/themes/twitter/pic/net-cn-sales.png' /&gt;&lt;/p&gt;
 
@@ -190,7 +190,7 @@ seajs.use([&amp;#39;jquery&amp;#39;, &amp;#39;hi&amp;#39;], function($, h) {
 
 &lt;p&gt;参考最底下的参考文章，省略。。。&lt;/p&gt;
 
-&lt;h2 id='id831'&gt;命令&lt;/h2&gt;
+&lt;h2 id='id885'&gt;命令&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;
@@ -200,13 +200,13 @@ seajs.use([&amp;#39;jquery&amp;#39;, &amp;#39;hi&amp;#39;], function($, h) {
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id832'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id='id886'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cd .ssh/heiniuhaha.github.com&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id833'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
+&lt;h3 id='id887'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;rake page           # Create a new page.
 rake post           # Begin a new post in ./_posts
@@ -227,17 +227,17 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id='id834'&gt;日常发布完整命令&lt;/h2&gt;
+&lt;h2 id='id888'&gt;日常发布完整命令&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;	git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
-	cd .ssh/heiniuhaha.github.com//定位到你blog的目录下
-	git pull origin master //先同步远程文件，后面的参数会自动连接你远程的文件
-	git status //查看本地自己修改了多少文件
-	git add .//添加远程不存在的git文件
-	git commit * -m &amp;quot;what I want told to someone&amp;quot;
-	git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
+cd .ssh/heiniuhaha.github.com//定位到你blog的目录下
+git pull origin master //先同步远程文件，后面的参数会自动连接你远程的文件
+git status //查看本地自己修改了多少文件
+git add .//添加远程不存在的git文件
+git commit * -m &amp;quot;what I want told to someone&amp;quot;
+git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id835'&gt;参考文章&lt;/h2&gt;
+&lt;h2 id='id889'&gt;参考文章&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href='http://beiyuu.com/github-pages/'&gt;使用Github Pages建独立博客&lt;/a&gt;&lt;/p&gt;
 
