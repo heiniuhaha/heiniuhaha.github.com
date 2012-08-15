@@ -308,25 +308,15 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
 
 
 ##seajs官方api
-
 - [详细官方文档](http://seajs.org/docs/#api)
-
 - [模块系统](https://github.com/seajs/seajs/issues/240)
-
 - [CMD 模块定义规范](https://github.com/seajs/seajs/issues/242)
-
 - [模块标识](https://github.com/seajs/seajs/issues/258)
-
 - [require 书写约定](https://github.com/seajs/seajs/issues/259)
-
 - [模块加载器](https://github.com/seajs/seajs/issues/260)
-
 - [配置](https://github.com/seajs/seajs/issues/262)
-
 - [常用插件](https://github.com/seajs/seajs/issues/265)
-
 - [打包部署](https://github.com/seajs/seajs/issues/281)
-
 - [快速参考](https://github.com/seajs/seajs/issues/266)
 
 
