@@ -351,6 +351,7 @@ SeaJS 提供了一个类似于npm的管理工具，里面有他们改造好的�
 - [jQuery 插件的模块化 -玉伯](http://lifesinger.wordpress.com/2011/05/18/jquery-plugins-modulization/) -墙外
 - [SeaJS – 对 CSS 模块的支持 -玉伯](http://lifesinger.wordpress.com/2011/05/02/seajs-css-support/) -墙外
 - [直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
+- [jQuery 模块介绍与 jQuery 插件的深度模块化 -玉伯](http://lifesinger.wordpress.com/2011/08/19/jquery-introduction-and-plugins-modulization/) -墙外
 - [seajs中文版源码](http://www.heiniuhaha.com/file/sea-zh.js)
 
 
