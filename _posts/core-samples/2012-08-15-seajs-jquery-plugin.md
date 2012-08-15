@@ -1,7 +1,7 @@
 ---
 layout: post
-title : [转]jQuery 模块介绍与 jQuery 插件的深度模块化
-description : 我们可以通过简单封装，让 jQuery 与jQuery的插件 成为 seajs 的模块。这样，调用时只要 require 即可。转自玉伯 [jQuery 模块介绍与 jQuery 插件的深度模块化],方便不能翻墙的同学查看。
+title : 【转】jQuery 模块介绍与 jQuery 插件的深度模块化
+description : 我们可以通过简单封装，让 jQuery 与jQuery的插件 成为 seajs 的模块。这样，调用时只要 require 即可。转自玉伯 【jQuery 模块介绍与 jQuery 插件的深度模块化】,方便不能翻墙的同学查看。
 category : seajs
 tags : [jquery, jquery Plugin, $, seajs, 模块化, 代码组织, 性能优化]
 ---
