@@ -109,11 +109,3 @@ jQuery 插件都依赖 jQuery 模块，为了加载 jQuery 插件，首先得将
 	        console.log(choice.hard());
 	    });
 	});
-	
-
-##参考文档
-[直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
-
-[seajs中文版源码](http://www.heiniuhaha.com/file/sea-zh.js)
-
-[SeaJS 里版本号和时间戳管理的最佳实践](http://lifesinger.wordpress.com/2011/08/01/best-practice-of-version-management/) 墙外

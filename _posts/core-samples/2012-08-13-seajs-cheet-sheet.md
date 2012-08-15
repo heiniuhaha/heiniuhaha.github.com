@@ -309,26 +309,62 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
 
 ##seajs官方api
 
-[详细官方文档](http://seajs.org/docs/#api)
+* [详细官方文档](http://seajs.org/docs/#api)
 
-[模块系统](https://github.com/seajs/seajs/issues/240)
+* [模块系统](https://github.com/seajs/seajs/issues/240)
 
-[CMD 模块定义规范](https://github.com/seajs/seajs/issues/242)
+* [CMD 模块定义规范](https://github.com/seajs/seajs/issues/242)
 
-[模块标识](https://github.com/seajs/seajs/issues/258)
+* [模块标识](https://github.com/seajs/seajs/issues/258)
 
-[require 书写约定](https://github.com/seajs/seajs/issues/259)
+* [require 书写约定](https://github.com/seajs/seajs/issues/259)
 
-[模块加载器](https://github.com/seajs/seajs/issues/260)
+* [模块加载器](https://github.com/seajs/seajs/issues/260)
 
-[配置](https://github.com/seajs/seajs/issues/262)
+* [配置](https://github.com/seajs/seajs/issues/262)
 
-[常用插件](https://github.com/seajs/seajs/issues/265)
+* [常用插件](https://github.com/seajs/seajs/issues/265)
 
-[打包部署](https://github.com/seajs/seajs/issues/281)
+* [打包部署](https://github.com/seajs/seajs/issues/281)
 
-[快速参考](https://github.com/seajs/seajs/issues/266)
+* [快速参考](https://github.com/seajs/seajs/issues/266)
 
-##非官方相关blog推荐
-[seajs所为何](http://cyj.me/why-seajs/zh/)
-[使用SeaJS实现模块化JavaScript开发](http://www.cnblogs.com/leoo2sk/archive/2011/06/27/write-javascript-with-seajs.html)
+
+##第三方库
+SeaJS 提供了一个类似于npm的管理工具，里面有他们改造好的第三方库，你可以在这里找找是否有适合的:
+ 
+* spm Git Pero:	[https://github.com/seajs/spm](https://github.com/seajs/spm)
+* spm module list:	[http://seajs.cloudfoundry.com/](http://seajs.cloudfoundry.com/)	
+
+
+##seajs blog 等文档
+* ###初级入门
+	* [使用 SeaJS 实现模块化 JavaScript 开发](http://www.cnblogs.com/leoo2sk/archive/2011/06/27/write-javascript-with-seajs.html)
+	* [SeaJS, 模組化開發加載套件](http://clonn.blogspot.com/2011/05/seajs-nonblocking-require-library.html) -墙外
+	* [NodeParty 杭州站会议纪实：Jscex, SeaJS 与 MyFOX](http://www.infoq.com/cn/news/2011/05/nodeparty-hangzhou)
+	* [SeaJS – 跨环境模块化开发实践 - 玉伯](http://lifesinger.wordpress.com/2011/05/14/seajs-and-nodejs/) -墙外
+	* [初识 SeaJS](http://ghsky.com/2011/05/seajs-first-view.html)
+	* [SeaJS – 不仅仅是脚本加载器  - 玉伯](http://lifesinger.wordpress.com/2011/04/26/intro-to-seajs/) -墙外
+	* [去哪儿网的 JavaScript 模块化之路](http://www.infoq.com/cn/presentations/hjp-infoq-salon)
+	* [海纳百川、有容乃大 - 玉伯](http://lifesinger.wordpress.com/2011/04/05/seajs-080-released/) -墙外
+
+* ###中级使用
+	* [seajs所为何-逸才](http://cyj.me/why-seajs/zh/)
+	* [扩展原生对象与 es5-safe 模块 - 玉伯](http://lifesinger.wordpress.com/2011/08/10/extending-built-in-native-objects/) -墙外
+	* [SeaJS 里版本号和时间戳管理的最佳实践](http://lifesinger.wordpress.com/2011/08/01/best-practice-of-version-management/) -墙外
+	* [在线本地调试大观 -玉伯](http://lifesinger.wordpress.com/2011/07/24/online-local-debug/) -墙外
+	* [在 SeaJS 中实现 html 模板文件的加载（Temod 介绍）](http://www.cnblogs.com/leoo2sk/archive/2011/07/01/temod-intro.html)
+	* [在 SeaJS 里使用 LABjs](http://blog.163.com/jinlu_hz/blog/static/113830152201142011225195/)
+	* [SeaJS 中的 exports 和模块加载 -玉伯](http://lifesinger.wordpress.com/2011/05/26/exports-and-module-load-in-seajs/)-墙外
+	* [jQuery 插件的模块化 -玉伯](http://lifesinger.wordpress.com/2011/05/18/jquery-plugins-modulization/) -墙外
+	* [SeaJS – 对 CSS 模块的支持 -玉伯](http://lifesinger.wordpress.com/2011/05/02/seajs-css-support/) -墙外
+
+	* [直接调用 jQuery 插件等非标准模块的方法](https://github.com/seajs/seajs/issues/286)
+	* [seajs中文版源码](http://www.heiniuhaha.com/file/sea-zh.js)
+
+
+
+* ###高级探索
+	* [shim是应该抛异常还是应该fail silently？-hax](http://hax.iteye.com/blog/1146699) -墙外
+	* [扩展 SeaJS 模块定义中的 module 参数的应用示例 -李牧](http://limu.iteye.com/blog/1136712)
+	* [SeaJS 和 RequireJS 的异同 -玉伯](http://lifesinger.wordpress.com/2011/05/17/the-difference-between-seajs-and-requirejs/) -墙外
