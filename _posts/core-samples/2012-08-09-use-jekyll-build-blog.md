@@ -66,13 +66,13 @@ dnspod链接地址[https://www.dnspod.cn/](https://www.dnspod.cn/)
 	git push origin master //更新到远程服务器上
 		
 ## 参考文章 ##
-[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html) 阮一峰写于2012-08-25 【推荐】
+- [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html) 阮一峰写于2012-08-25 【推荐】
 
-[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
+- [使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
 
-[使用github作为博客引擎](http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html)
+- [使用github作为博客引擎](http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html)
 
-[The Quickest Way to Blog with Jekyll.](http://jekyllbootstrap.com/)
+- [The Quickest Way to Blog with Jekyll.](http://jekyllbootstrap.com/)
 
 
 ## 附件：git api 总结图 ##
