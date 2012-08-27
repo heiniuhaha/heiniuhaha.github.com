@@ -109,3 +109,21 @@ jQuery 插件都依赖 jQuery 模块，为了加载 jQuery 插件，首先得将
 	        console.log(choice.hard());
 	    });
 	});
+	
+##按需加载
+很多时候模块并不需要立即加载，等到需要时再加载，性能更好。
+
+	//init.js
+	$("#J_PicCover").click(function(){
+		require.async('module/highlight', function(){
+			$(".buy-info").highlight({color:'#ffe5c4',speed:500,complete:function(){
+			},iterator:'sinusoidal'});
+		});
+	});
+
+	//highlight.js
+	define(function(require, exports) {
+		jQuery.fn.highlight = function(settings) {
+			//…...
+		}
+	});

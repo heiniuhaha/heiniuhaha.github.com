@@ -101,9 +101,10 @@ address{display:block;margin-bottom:18px;line-height:18px;font-style:normal;}
 small{font-size:100%;}
 cite{font-style:normal;}
 code,pre{padding:0 3px 2px;font-family:Menlo,Monaco,"Courier New",monospace;font-size:12px;color:#333333;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
-code{padding:3px 4px;color:#d14;background-color:#f7f7f9;border:1px solid #e1e1e8;}
+code{padding:3px 4px;color:#d14;background-color:#f7f7f9;border:1px solid #e1e1e8;margin:0 2px;}
 pre{display:block;padding:8.5px;margin:0 0 9px;font-size:12px;line-height:18px;background-color:#f5f5f5;border:1px solid #ccc;border:1px solid rgba(0, 0, 0, 0.15);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;white-space:pre;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;}pre.prettyprint{margin-bottom:18px;}
 pre code{padding:0;color:inherit;background-color:transparent;border:0;line-height: 1.8;font-size: 14px;font-family: monaco;}
+p code{white-space:nowrap;}
 .pre-scrollable{max-height:340px;overflow-y:scroll;}
 form{margin:0 0 18px;}
 fieldset{padding:0;margin:0;border:0;}
@@ -752,7 +753,7 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .v-entry h5 { margin-bottom: 18px; color: #444; font-size: 14px; line-height: 26px; text-transform: uppercase; }
 .v-entry h6 { font-size: 13px; font-weight: 700; margin-bottom: 0.5em; color: #444; line-height: 26px; }
 .v-entry > h2:first-child, .v-entry > h1:first-child, .v-entry > h1:first-child + h2 { border: 0 none; }
-.v-entry p { font-size: 13px; line-height: 22px; margin-bottom: 15px; text-indent: 24px; }
+.v-entry p { font-size: 13px; line-height: 24px; margin-bottom: 15px; text-indent: 24px; }
 .v-entry > p:first-child { margin: 0.8em 0; text-indent: 0; }
 .v-entry ul,
 .v-entry ol { padding-bottom: 15px; margin-left: 24px; margin-top: 0.6em; }

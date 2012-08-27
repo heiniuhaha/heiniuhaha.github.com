@@ -135,6 +135,7 @@ tags : [seajs, 模块化, 代码组织, 性能优化]
 		不能重命名 require
 		不能覆盖 require
 		require 的参数必须是字符串字面量，不可以 require(foo()) 或者 require(bar)， 也不可以是 require(should_be_a ? 'a' : 'b')。	参数值必须是字符串直接量,如 require("my-module");
+		核心原因是因为在浏览器端，文件的读取是异步的，依赖信息要提前获取，不能在运行时才确定。在服务器端，文件读取是同步的，因此可以是变量。
 	*/
 	define(function(require) {
 	  var a = require('./a');
