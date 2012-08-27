@@ -1,6 +1,6 @@
 ---
 layout: post
-title : 使用github+jekyll+markdown搭建blog环境，完美替代wordpress
+title : 使用github+jekyll搭建blog环境，完美替代wordpress
 description : 讲讲怎么使用github pages做blog环境,给自己做个记录，也给大家提供教程，分享交流
 category : lessons
 tags : [github, pages, blog, jekyll]
@@ -66,6 +66,7 @@ dnspod链接地址[https://www.dnspod.cn/](https://www.dnspod.cn/)
 	git push origin master //更新到远程服务器上
 		
 ## 参考文章 ##
+[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html) 阮一峰写于2012-08-25 【推荐】
 
 [使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
 
