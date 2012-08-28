@@ -4,7 +4,7 @@
  <title>黑妞haha-前端开发</title>
  <link href="http://heiniuhaha.github.com/atom.xml" rel="self"/>
  <link href="http://heiniuhaha.github.com"/>
- <updated>2012-08-28T08:54:40+08:00</updated>
+ <updated>2012-08-28T09:18:16+08:00</updated>
  <id>http://heiniuhaha.github.com</id>
  <author>
    <name>宋建敏</name>
@@ -357,7 +357,7 @@ seajs.config({
   ]
 });	&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id459'&gt;条件加载&lt;/h2&gt;
+&lt;h2 id='id22'&gt;条件加载&lt;/h2&gt;
 
 &lt;p&gt;第一种：把依赖的模块都在 define 头部手工声明，不再依赖 SeaJS 的自动解析功能。这个模块同时依赖 play 和 work 两个模块，加载器会把这两个模块文件都下载下来。如果需要在 require 模块之后串行执行代码，那么只能用这个方式。&lt;/p&gt;
 
@@ -376,7 +376,7 @@ seajs.config({
     });
 });&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id460'&gt;按需加载&lt;/h2&gt;
+&lt;h2 id='id23'&gt;按需加载&lt;/h2&gt;
 
 &lt;p&gt;很多时候模块并不需要立即加载，等到需要时再加载，性能更好。&lt;/p&gt;
 
@@ -405,7 +405,7 @@ define(function(require, exports) {
 
 &lt;p&gt;该页面列举了 SeaJS 中的常用 API。只要掌握这些方法，就可以娴熟地进行模块化开发。&lt;/p&gt;
 
-&lt;h3 id='id452'&gt;启动模块系统&lt;/h3&gt;
+&lt;h3 id='id15'&gt;启动模块系统&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;http://modules.seajs.org/seajs/1.2.0/sea.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script&amp;gt;
@@ -617,7 +617,7 @@ define(function(require, exports, module) {
 
 &lt;p&gt;以上接口是最常用的，要牢记于心。&lt;/p&gt;
 
-&lt;h3 id='id453'&gt;可写成如下&lt;/h3&gt;
+&lt;h3 id='id16'&gt;可写成如下&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;seajs.config({
   alias: {
@@ -689,7 +689,7 @@ define(function(require, exports, module) = {
     }
 });&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id454'&gt;实际使用中&lt;/h2&gt;
+&lt;h2 id='id17'&gt;实际使用中&lt;/h2&gt;
 
 &lt;p&gt;在工程内使用seajs，以前引用的插件、模块也都要用define的语法重新进行封装，比较麻烦，老代码可以不修改，继续使用就好。但强烈建立花点时间都修改成 CMD 模块，这样对以后的维护，以及页面性能很有好处。不然以后修改起来估计会更麻烦。&lt;/p&gt;
 
@@ -729,7 +729,7 @@ define(function(require, exports, module) = {
 &lt;li&gt;&lt;a href='https://github.com/seajs/seajs/issues/266'&gt;快速参考&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id='id455'&gt;第三方库&lt;/h2&gt;
+&lt;h2 id='id18'&gt;第三方库&lt;/h2&gt;
 
 &lt;p&gt;SeaJS 提供了一个类似于npm的管理工具，里面有他们改造好的第三方库，你可以在这里找找是否有适合的:&lt;/p&gt;
 
@@ -741,7 +741,7 @@ define(function(require, exports, module) = {
 
 &lt;h2 id='seajs_blog_'&gt;seajs blog 等文档&lt;/h2&gt;
 
-&lt;h3 id='id456'&gt;初级入门&lt;/h3&gt;
+&lt;h3 id='id19'&gt;初级入门&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://www.cnblogs.com/leoo2sk/archive/2011/06/27/write-javascript-with-seajs.html'&gt;使用 SeaJS 实现模块化 JavaScript 开发&lt;/a&gt;&lt;/li&gt;
@@ -761,7 +761,7 @@ define(function(require, exports, module) = {
 &lt;li&gt;&lt;a href='http://lifesinger.wordpress.com/2011/04/05/seajs-080-released/'&gt;海纳百川、有容乃大 - 玉伯&lt;/a&gt; -墙外&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id='id457'&gt;中级使用&lt;/h3&gt;
+&lt;h3 id='id20'&gt;中级使用&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://cyj.me/why-seajs/zh/'&gt;seajs所为何-逸才&lt;/a&gt;&lt;/li&gt;
@@ -789,7 +789,7 @@ define(function(require, exports, module) = {
 &lt;li&gt;&lt;a href='http://www.heiniuhaha.com/file/sea-zh.js'&gt;seajs中文版源码&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id='id458'&gt;高级探索&lt;/h3&gt;
+&lt;h3 id='id21'&gt;高级探索&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://hax.iteye.com/blog/1146699'&gt;shim是应该抛异常还是应该fail silently？-hax&lt;/a&gt; -墙外&lt;/li&gt;
@@ -807,7 +807,7 @@ define(function(require, exports, module) = {
    <id>http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog</id>
    <content type="html">&lt;p&gt;也来讲讲怎么使用github pages做blog环境&lt;/p&gt;
 
-&lt;h2 id='id445'&gt;优点&lt;/h2&gt;
+&lt;h2 id='id8'&gt;优点&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;空间免费，github托管，稳定又安全，遭遇过空间商跑路的朋友是不是想起伤心往事；&lt;/p&gt;
@@ -825,7 +825,7 @@ define(function(require, exports, module) = {
 &lt;p&gt;文章用markedown编写，以前遭受排版困扰的亲们是不是很激动；&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id='id446'&gt;购买域名&lt;/h2&gt;
+&lt;h2 id='id9'&gt;购买域名&lt;/h2&gt;
 
 &lt;p&gt;可以去&lt;a href='http://www.net.cn'&gt;万网&lt;/a&gt;，这两天正好在促销. &lt;img alt='net-cn-sales' src='/assets/themes/twitter/pic/net-cn-sales.png' /&gt;&lt;/p&gt;
 
@@ -837,7 +837,7 @@ define(function(require, exports, module) = {
 
 &lt;p&gt;参考最底下的参考文章，省略。。。&lt;/p&gt;
 
-&lt;h2 id='id447'&gt;命令&lt;/h2&gt;
+&lt;h2 id='id10'&gt;命令&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;
@@ -847,13 +847,13 @@ define(function(require, exports, module) = {
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id448'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id='id11'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cd .ssh/heiniuhaha.github.com&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id449'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
+&lt;h3 id='id12'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;rake page           # Create a new page.
 rake post           # Begin a new post in ./_posts
@@ -874,7 +874,7 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id='id450'&gt;日常发布完整命令&lt;/h2&gt;
+&lt;h2 id='id13'&gt;日常发布完整命令&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
 cd .ssh/heiniuhaha.github.com//定位到你blog的目录下
@@ -884,7 +884,7 @@ git add .//添加远程不存在的git文件
 git commit * -m &amp;quot;what I want told to someone&amp;quot;
 git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id451'&gt;参考文章&lt;/h2&gt;
+&lt;h2 id='id14'&gt;参考文章&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -1121,7 +1121,7 @@ if ( array[ i ] === elem ) {
         return -1;  //如果数组里没有这个元素, 返回-1.  
     }  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id='id441'&gt;数据缓存&lt;/h3&gt;
+&lt;h3 id='id4'&gt;数据缓存&lt;/h3&gt;
 
 &lt;p&gt;jQuery.data&lt;/p&gt;
 
@@ -1332,7 +1332,7 @@ alert (value)  &lt;/code&gt;&lt;/pre&gt;
         }  
     }  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id='id442'&gt;队列控制&lt;/h3&gt;
+&lt;h3 id='id5'&gt;队列控制&lt;/h3&gt;
 
 &lt;p&gt;队列控制也是jquery中很有特点的一个功能. 可以用来管理动画或者事件等的执行顺序. queue和dequeue主要为动画服务. 比如在jquery的动画里, 因为javascript的单线程异步机制, 如果要管理一批动画的执行顺序, 而不是让它们一起在屏幕上飞舞. 一般我们是一个一个的把下个动画写在上个动画的回调函数中, 意味着如果要让十个动画按次序执行. 至少要写9个回调函数. 好吧我承认我做过这样的事, 直接导致我的视力从5.2变为5.1.&lt;/p&gt;
 
@@ -1464,7 +1464,7 @@ return q || [];
 
 &lt;p&gt;用一个空数组代替了原来的队列.&lt;/p&gt;
 
-&lt;h3 id='id443'&gt;多库共存&lt;/h3&gt;
+&lt;h3 id='id6'&gt;多库共存&lt;/h3&gt;
 &lt;code&gt;jQuery.noConflict&lt;/code&gt;
 &lt;p&gt;将变量$的控制权让渡给上一个实现它的那个库. 可能很多人都被多库共存时的$变量问题困扰过. 比如你先引入了prototype库,然后又引入了jquery.因为jquery的$会覆盖prototype的$. 现在想调用prototype的$怎么办呢, noConflict方法就派上用场了. Jquery代码里最开始就有一句&lt;code&gt;_$ = window.$ &lt;/code&gt;, 在加载的时候就用&lt;code&gt;_$&lt;/code&gt;来引用原来的&lt;code&gt;$&lt;/code&gt; (比如现在就是prototype库里的$).&lt;/p&gt;
 
@@ -1479,7 +1479,7 @@ return q || [];
         return jQuery;  
     }  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id='id444'&gt;继承和拷贝&lt;/h4&gt;
+&lt;h4 id='id7'&gt;继承和拷贝&lt;/h4&gt;
 
 &lt;p&gt;jQuery.prototype.extend和jQuery.extend 扩展 jQuery 元素集来提供新的方法, 或者把一个对象的属性拷贝到另外一个对象上. 通常javascript的继承实现有4种方式. 1 构造继承 2 prototype继承 3 属性拷贝 4 实例继承(这个有点特殊, 主要用于继承内置对象)&lt;/p&gt;
 
@@ -1581,11 +1581,11 @@ return q || [];
    <link href="http://heiniuhaha.github.com/f2e/2012/07/30/f2e-master"/>
    <updated>2012-07-30T00:00:00+08:00</updated>
    <id>http://heiniuhaha.github.com/f2e/2012/07/30/f2e-master</id>
-   <content type="html">&lt;h2 id='id439'&gt;牛人列表&lt;/h2&gt;
+   <content type="html">&lt;h2 id='id2'&gt;牛人列表&lt;/h2&gt;
 
 &lt;p&gt;该页面列举了我仰慕的前端牛人，以他们为榜样，站在巨人的肩膀上学习，能让我们再前端开发道路上更顺利。也推荐给大家学习的目标。会持续更新&amp;#8230;&lt;/p&gt;
 
-&lt;h3 id='id440'&gt;前端架构&lt;/h3&gt;
+&lt;h3 id='id3'&gt;前端架构&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href='http://hikejun.com/blog/'&gt;张克军-kejun&lt;/a&gt;&lt;/strong&gt; 绝对大牛级别的人物，目前在豆瓣负责前端架构，经常出现在各种技术交流活动中，如咱熟知的D2&lt;/p&gt;
 
@@ -1599,7 +1599,7 @@ return q || [];
    <id>http://heiniuhaha.github.com/2012/07/29/http-protocol</id>
    <content type="html">&lt;p&gt;此文正在进行中。。。&lt;/p&gt;
 
-&lt;h3 id='id438'&gt;参考文章：&lt;/h3&gt;
+&lt;h3 id='id1'&gt;参考文章：&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
