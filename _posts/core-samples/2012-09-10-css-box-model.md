@@ -59,8 +59,22 @@ w3c标准盒模型占总空间=contentWidth+padding+margin+border；
 同时：div的背景颜色充满了padding和border区域，border透明时，可发现背景颜色就是div的bgcolor.（ie6不支持透明transparent）
 
 ###触发盒模型
-IE6 IE7 在怪异模式下，盒模型是一模一样的，都是IE盒模型，即总width=width
-IE6 IE7 在标准模式下，盒模型也是一模一样的，都是W3C盒模型， 即总width=width+padding+border
+IE6 IE7 IE8 IE9 在Quirks怪异模式下，盒模型是一模一样的，都是IE盒模型，即总width=width;
+
+IE6 IE7 IE8 IE9 在标准模式下，盒模型也是一模一样的，都是W3C盒模型， 即总width=width+padding+border;
+
+非IE下的浏览器，如FF、chrome都采用标准模式渲染，都是W3C盒模型， 即总width=width+padding+border;
+
+###border区域是否填充背景色
+####标准模式下
+- 非IE浏览器下，div的背景颜色充满了padding和border。border透明时，可发现border区域填充了背景色。
+
+- IE8和IE9在标准模式下，和非IE浏览器渲染一致，border区域填充背景色；
+
+- IE6 IE7标准模式下，border区域不填充背景色；
+
+####非标准模式下
+- IE6 IE7 IE8 IE9在Quirks怪异模式下，border区域都不会填充背景色；
 
 ### 备注：
 
