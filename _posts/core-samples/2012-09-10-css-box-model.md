@@ -66,6 +66,14 @@ IE6 IE7 IE8 IE9 在标准模式下，盒模型也是一模一样的，都是W3C�
 非IE下的浏览器，如FF、chrome都采用标准模式渲染，都是W3C盒模型， 即总width=width+padding+border;
 
 ###border区域是否填充背景色
+border区域不填充背景色图
+
+![border区域不填充背景色](http://www.heiniuhaha.com/test/css-box-model/border-transparent-ie7.png)
+
+border区域填充背景色图
+
+![border区域填充背景色](http://www.heiniuhaha.com/test/css-box-model/border-transparent-ie8.png)
+
 ####标准模式下
 - 非IE浏览器下，div的背景颜色充满了padding和border。border透明时，可发现border区域填充了背景色。
 
