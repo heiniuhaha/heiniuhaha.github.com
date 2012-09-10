@@ -1,9 +1,9 @@
 ---
 layout: post
-title : css盒模型
-description : 前端就是需要温故而知新，好好整理下前端基础知识，此偏讲讲IE盒模型和W3C标准盒模型差异，巩固下基础知识。
+title : IE盒模型与W3C盒模型浅总结
+description : 前端就是需要温故而知新，好好整理下前端基础知识，此偏讲讲IE盒模型和W3C标准盒模型差异，巩固下基础知识。同时总结下border区域是否会填充背景色。
 category : css
-tags : [css, 盒模型, IE, W3C, DOCTYPE]
+tags : [css, 盒模型, IE, W3C, DOCTYPE, border, backgroundColor, Quirks]
 ---
 {% include JB/setup %}
 
