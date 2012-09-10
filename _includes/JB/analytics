@@ -1,3 +1,4 @@
+<!--
 {% if site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
 
 {% case site.JB.analytics.provider %}
@@ -12,3 +13,8 @@
 {% endcase %}
 
 {% endif %}
+-->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0a2402a2f6f786cb7b8aa7466136e44e' type='text/javascript'%3E%3C/script%3E"));
+</script>
