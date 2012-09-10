@@ -15,7 +15,6 @@ css:层叠样式表（Cascading Style Sheets）
 
 - [http://www.heiniuhaha.com/test/css-box-model/css-box-model-IE.html](http://www.heiniuhaha.com/test/css-box-model/css-box-model-IE.html) 不声明doctype
 
-
 code ：
 
 	<style> 
@@ -33,9 +32,14 @@ code ：
 	
 	<div></div>
 	<div class="box2"></div>
+	
 chrome测试图：
 
 ![chrome测试图](http://www.heiniuhaha.com/test/css-box-model/css-box-model-chrome.png)
+
+IE6测试图-IE盒模型和W3C标准盒模型对比图：
+
+![IE6测试图-标准和非标准](http://www.heiniuhaha.com/test/css-box-model/box-ie6.png)
 
 ###盒模型示意图
 
