@@ -42,10 +42,12 @@ IE6测试图-IE盒模型和W3C标准盒模型对比图：
 ![IE6测试图-标准和非标准](http://www.heiniuhaha.com/test/css-box-model/box-ie6.png)
 
 ###盒模型示意图
-- IE盒模型
+- ####IE盒模型
+
 ![IE盒模型](http://www.heiniuhaha.com/test/css-box-model/p2.gif)
 
-- W3C标准盒模型
+- ####W3C标准盒模型
+
 ![W3C标准盒模型](http://www.heiniuhaha.com/test/css-box-model/p3.gif)
 
 ###总结：
