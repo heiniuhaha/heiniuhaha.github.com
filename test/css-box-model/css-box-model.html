@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+	<meta charset="utf-8"/>
 	<style>
 		div{
 			background-color:red;
@@ -10,12 +11,13 @@
 			margin:100px;
 			border:10px solid #000;
 		}
+		/*ie6不支持透明transparent*/
 		.box2{border-color:transparent}
 	</style>
 </head>
 <body>
 	<div class="box1">测试盒模型,<br/>content尺寸300px*300px，<br/>padding:20px <br/>margin:20 <br/>border:10px</div>
 	<div class="box2">测试盒模型,<br/>content尺寸300px*300px，<br/>padding:20px <br/>margin:20 <br/>border:10px</div>
-	<h3>box=contentWidth+padding+margin+border，div的背景颜色充满了padding和border。border透明时，可发现背景颜色就是div的bgcolor.</h3>
+	<h3>div的背景颜色充满了padding和border。border透明时，可发现背景颜色就是div的bgcolor.</h3>
 </body>
 </html>
