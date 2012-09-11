@@ -78,10 +78,12 @@ tags : [css, js, html]
 ####★指出JS拖动的原理
 (将元素绝对定位,一点点地改变其top,left样式来实现移动的效果,top,left可以通过鼠标获取)
 
-####★说一下css transform2D与transform3D的区别(一个是2*3矩阵,一个是4*4矩阵,transform3D支持GPU硬件加速,更加流畅,建议用transform3D模拟transform2D)
+####★说一下css transform2D与transform3D的区别
+(一个是2*3矩阵,一个是4*4矩阵,transform3D支持GPU硬件加速,更加流畅,建议用transform3D模拟transform2D)
 
 
-####★指出{}+[]与[]+{}的值,为什么 (第一个为0,因为{}放在语句在前面,JS引擎认为它只是一个块,不是空对象,相当于+[] ===> +"" ==> 0, 第二个是"[object Object]",两者取toString(),然后相加)
+####★指出{}+[]与[]+{}的值,为什么 
+(第一个为0,因为{}放在语句在前面,JS引擎认为它只是一个块,不是空对象,相当于+[] ===> +"" ==> 0, 第二个是"[object Object]",两者取toString(),然后相加)
 
 
 ####★说一下浏览器资源加载的情况,IE与其他浏览器各版本的不同之外
