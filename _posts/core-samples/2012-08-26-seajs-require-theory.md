@@ -7,6 +7,7 @@ tags : [seajs, 依赖, 模块, 原理, 异步加载, cache, 接口]
 ---
 {% include JB/setup %}
 
+###seajs模块依赖问题
 最近在做项目的时候发现一些关于模块依赖问题，特记录下:
 
 比如现有3个文件：
@@ -46,3 +47,19 @@ define 只是注册模块信息，比如打包之后：
 >是纯注册信息。
 
 >而 <code>require('./a')</code> 时，才会执行 <code>seajs.cache['a'].factory</code>, 执行后得到 <code>seajs.cache['a'].exports</code>
+
+>
+
+
+###扩展：URI与URL的区别
+URI:Uniform Resource Identifiers ，统一资源标识符；
+
+URL:Uniform Resource Locators ，统一资源定位符；
+
+URN:Uniform Resource Names，统一资源名称
+
+URL,URN是URI的子集.
+
+###参考
+- Module.STATUS的具体含义：[https://github.com/seajs/seajs/issues/303](https://github.com/seajs/seajs/issues/303)
+- 分清 URI、URL 和 URN[http://www.ibm.com/developerworks/cn/xml/x-urlni.html](http://www.ibm.com/developerworks/cn/xml/x-urlni.html)
