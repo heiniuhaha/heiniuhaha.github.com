@@ -1,3 +1,12 @@
+---
+layout: post
+title : 	前端面试题
+description : 据说是腾讯的前端面试题，自勉下。
+category : css
+tags : [css, js, html]
+---
+{% include JB/setup %}
+
 ####★列出display的值 
  
 可用值 值的说明
