@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>水平垂直居中</title>
+	<style>
+		body{background:url(img3.jpg) center center no-repeat;}
+		.not-float,.yes-float,.no-float2{background-color:#eee;width:400px;height:400px;}
+		
+		.not-float{display:table-cell;vertical-align:middle;text-align:center;}
+		.not-float img{}
+		
+		.yes-float{position:relative;}
+		.yes-float div{float:left;position:absolute;width:100px;height:100px;background-color:blue;top:50%;left:50%;}
+		.yes-float p{float:left;background-color:red;opacity:0.8;width:100%;height:100%;position:absolute;top:-50%;left:-50%;margin:0;}
+		
+		.no-float2{text-align:center;font-size:0;}/*font-size:0 为了消除inline-block元素间的间隙*/
+		.no-float2 i{width:1px;height:100%;background-color:green;display:inline-block;vertical-align:middle;}
+		.no-float2 img{vertical-align:middle;}
+	</style>
+</head>
+<body>
+	<h2>一、非浮动元素水平垂直居中（display:table-cell）</h2>
+	<p>需求：容器确定高和宽，图片高宽不确定，需要等比例压缩到固定的宽和高的容器里，同时水平垂直居中。</p>
+	<p>方案：{display:table-cell} 要求容器确定宽和高</p>
+	<div class="not-float">
+		<img src="img.jpg"/>
+	</div>
+	
+	<h2>二、浮动元素水平垂直居中（百分比 50%  &&  -50%）</h2>
+	<p>
+		需求：容器确定宽和高<br/>
+		方案：给content包一层父元素div，利用百分比的值是根据父元素的值来计算的原理；
+	</p>
+	<div class="yes-float">
+		<div><p>我是浮动的内容我是浮动的内容我是浮动的内容我是浮动的内容我是浮动的内容</p></div>
+	</div>
+	
+	<h2>三、图片水平垂直居中（inline-block）</h2>
+	<div class="no-float2">
+		<img src="img2.jpg">
+		<i></i>
+	</div>
+	
+	最简单：图片水平垂直居中（背景图片居中 background:url() center center）</h3>
+	
+</body>
+</html>
