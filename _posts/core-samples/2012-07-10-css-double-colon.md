@@ -3,7 +3,7 @@ layout: post
 title : 伪元素与伪类
 description : 前端就是需要温故而知新，好好整理下前端基础知识，此偏学习和认识css3的伪元素。
 category : css
-tags : [css, 伪元素, 伪类, :before, ::before]
+tags : [css, 伪元素, 伪类]
 ---
 {% include JB/setup %}
 
