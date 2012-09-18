@@ -1,7 +1,7 @@
 ---
 layout: post
-title : 	前端面试题
-description : 据说是腾讯的前端面试题，自勉下。
+title : 	前端基础点
+description : 都是前端的基础，需要好好掌握。
 category : css
 tags : [css, js, html]
 ---
