@@ -1,0 +1,204 @@
+一个 JavaScript 对象，即 XMLHttpRequest对象
+
+###XMLHttpRequest的方法和属性。
+- open()：建立到服务器的新请求。
+- send()：向服务器发送请求。
+- abort()：退出当前请求。
+- readyState：提供当前 HTML 的就绪状态。
+- responseText：服务器返回的请求响应文本。
+
+备注：
+
+<code>request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')</code>
+
+URL编码将 postdata 中不允许使用的字符转换为等效字符实体；URL 解码会反转此编码过程。
+
+
+###HTTP就绪状态 request.readyState
+
+- 0：请求没有发出（在调用 open() 之前）。
+- 1：请求已经建立但还没有发出（调用 send() 之前）。
+- 2：请求已经发出正在处理之中（这里通常可以从响应得到内容头部）。
+- 3：请求已经处理，响应中通常有部分数据可用，但是服务器还没有完成响应。
+- 4：响应已完成，可以访问服务器响应并使用它。
+
+###HTTP状态码 request.status
+
+- 200 ： 一切顺利
+- 404 ： 错误，该页面不存在
+- 403、401 ： 表示所访问数据受到保护或者禁止访问
+
+###ajax请求方式
+- GET方法提交数据不安全，数据置于请求行，客户端地址栏可见; GET 方法提交的数据大小限制在255 个字符之内。
+- POST方法提交的数据置于消息主体内，客户端不可见， POST 方法提交的数据大小没有限制。参数不是跟在URL后面的，而是存放在http请求的body部分的，关于请求参数在http请求body中存放的形式类似get方式
+
+
+###ajax完整代码
+	
+	/*
+	1、创建新的 XMLHttpRequest 对象，创建一个新变量并赋给它一个 XMLHttpRequest 对象实例
+	2、打开请求 open()
+		- request-type：发送请求的类型。典型的值是 GET 或 POST，但也可以发送 HEAD 请求。
+		- url：要连接的 URL。
+		- asynch：如果希望使用异步连接则为 true，否则为 false。该参数是可选的，默认为 true。
+		- username：如果需要身份验证，则可以在此指定用户名。该可选参数没有默认值。
+		- password：如果需要身份验证，则可以在此指定口令。该可选参数没有默认值。	*/
+
+	var request = false;
+	try {
+		request = new XMLHttpRequest();
+	}catch (trymicrosoft) {
+		try {
+			request = new ActiveXObject("Msxml2.XMLHTTP");
+		}catch (othermicrosoft) {
+			try {
+				request = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (failed) {
+				request = false;
+			}  
+		}
+	}
+	if (!request){
+		alert("Error initializing XMLHttpRequest!");
+	}
+	function getCustomerInfo() {
+		var phone = document.getElementById("phone").value;
+		var url = "/cgi-local/lookupCustomer.php?phone=" + escape(phone);
+		request.open("GET", url, true);
+		request.onreadystatechange = updatePage;
+		request.send(null);
+	}
+	
+	function updatePage() {
+		if (request.readyState == 4) {
+			if (request.status == 200) {
+				var response = request.responseText.split("|");
+				document.getElementById("order").value = response[0];
+				document.getElementById("address").innerHTML =
+				response[1].replace(/\n/g, "");
+			} else{
+				alert("status is " + request.status);
+			}
+		}
+	}
+	
+###jQuery AJAX事件列表
+
+- ajaxStart (Global Event)
+
+This event is broadcast if an Ajax request is started and no other Ajax requests are currently running.
+
+- **beforeSend (Local Event)**
+
+This event, which is triggered before an Ajax request is started, allows you to modify the XMLHttpRequest object (setting additional headers, if need be.)
+
+- ajaxSend (Global Event)
+
+This global event is also triggered before the request is run.
+
+- **success (Local Event)**
+
+This event is only called if the request was successful (no errors from the server, no errors with the data).
+
+- ajaxSuccess (Global Event)
+
+This event is also only called if the request was successful.
+
+- **error (Local Event)**
+
+This event is only called if an error occurred with the request (you can never have both an error and a success callback with a request).
+
+- ajaxError (Global Event)
+
+This global event behaves the same as the local error event.
+
+- **complete (Local Event)**
+
+This event is called regardless of if the request was successful, or not. You will always receive a complete callback, even for synchronous requests.
+
+- ajaxComplete (Global Event)
+
+This event behaves the same as the complete event and will be triggered every time an Ajax request finishes.
+
+- ajaxStop (Global Event)
+
+This global event is triggered if there are no more Ajax requests being processed.
+
+###$.ajax()参数列表
+参数名	类型	描述
+
+- url	
+String	(默认: 当前页地址) 
+发送请求的地址。
+
+- type	
+String	(默认: "GET") 请求方式 ("POST" 或 "GET")， 默认为 "GET"。注意：其它 HTTP 请求方法，如 PUT 和 DELETE 也可以使用，但仅部分浏览器支持。
+
+- timeout	
+Number	设置请求超时时间（毫秒）。此设置将覆盖全局设置。
+
+- async	
+Boolean	(默认: true) 默认设置下，所有请求均为异步请求。如果需要发送同步请求，请将此选项设置为 false。注意，同步请求将锁住浏览器，用户其它操作必须等待请求完成才可以执行。
+
+- beforeSend	
+Function	发送请求前可修改 XMLHttpRequest 对象的函数，如添加自定义 HTTP 头。XMLHttpRequest 对象是唯一的参数。
+<pre>
+function (XMLHttpRequest) {
+  this; // the options for this ajax request，this指向ajax请求的选项配置信息
+}
+</pre>
+- cache	
+Boolean	(默认: true) jQuery 1.2 新功能，设置为 false 将不会从浏览器缓存中加载请求信息。
+
+- complete	
+Function	请求完成后回调函数 (请求成功或失败时均调用)。参数： XMLHttpRequest 对象，成功信息字符串。
+<pre>
+function (XMLHttpRequest, textStatus) {
+  this; // the options for this ajax request
+}
+</pre>
+
+- contentType	
+String	(默认: "application/x-www-form-urlencoded") 发送信息至服务器时内容编码类型。默认值适合大多数应用场合。
+
+- data	
+Object,String	发送到服务器的数据。将自动转换为请求字符串格式。GET 请求中将附加在 URL 后。查看 processData 选项说明以禁止此自动转换。必须为 Key/Value 格式。如果为数组，jQuery 将自动为不同值对应同一个名称。如 {foo:["bar1", "bar2"]} 转换为 ’’&foo=bar1&foo=bar2’’。
+
+- dataType	
+String	预期服务器返回的数据类型。如果不指定，jQuery 将自动根据 HTTP 包 MIME 信息返回 responseXML 或 responseText，并作为回调函数参数传递，可用值:
+
+	"xml": 返回 XML 文档，可用 jQuery 处理。
+	
+	"html": 返回纯文本 HTML 信息；包含 script 元素。
+	
+	"script": 返回纯文本 JavaScript 代码。不会自动缓存结果。
+	
+	"json": 返回 JSON 数据 。
+	
+	"jsonp": JSONP 格式。使用 JSONP 形式调用函数时，如 "myurl?callback=?" jQuery 将自动替换 ? 为正确的函数名，以执行回调函数。
+	
+- error	
+Function	(默认: 自动判断 (xml 或 html)) 请求失败时将调用此方法。这个方法有三个参数：XMLHttpRequest 对象，错误信息，（可能）捕获的错误对象。
+<pre>
+function (XMLHttpRequest, textStatus, errorThrown) {
+  // 通常情况下textStatus和errorThown只有其中一个有值 
+  this; // the options for this ajax request
+}
+</pre>
+- global	
+Boolean	(默认: true) 是否触发全局 AJAX 事件。设置为 false 将不会触发全局 AJAX 事件，如 ajaxStart 或 ajaxStop 。可用于控制不同的Ajax事件
+
+- ifModified	
+Boolean	(默认: false) 仅在服务器数据改变时获取新数据。使用 HTTP 包 Last-Modified 头信息判断。
+
+- processData	
+Boolean	(默认: true) 默认情况下，发送的数据将被转换为对象(技术上讲并非字符串) 以配合默认内容类型 "application/x-www-form-urlencoded"。如果要发送 DOM 树信息或其它不希望转换的信息，请设置为 false。
+
+- success	
+Function	请求成功后回调函数。这个方法有两个参数：服务器返回数据，返回状态
+<pre>
+function (data, textStatus) {
+  // data could be xmlDoc, jsonObj, html, text, etc...
+  this; // the options for this ajax request
+}
+</pre>
