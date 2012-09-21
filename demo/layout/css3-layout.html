@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>自适应宽度，左右两栏固定宽度，中间栏优先加载</title>
+<style>
+.container{
+        display:-moz-box;
+        display:-webkit-box;
+        }
+div{
+        padding:10px;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;                
+        }        
+.sider_l{
+        width:250px;
+        -moz-box-ordinal-group:1;
+        -webkit-box-ordinal-group:1;                
+        background:limegreen;
+        }
+.middle_content{
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        -moz-box-ordinal-group:2;
+        -webkit-box-ordinal-group:2;
+        background:lightpink;                
+        }        
+.sider_r{
+        width:250px;
+        -moz-box-ordinal-group:3;
+        -webkit-box-ordinal-group:3;                
+        background:green;                
+        }                        
+</style>
+</head>
+
+<body>
+        <div class="container">
+            <div class="middle_content">优先加载主内容区</div>
+        <div class="sider_l">左边栏</div>
+                <div class="sider_r">右边栏</div>            
+    </div>
+</body>
+</html>

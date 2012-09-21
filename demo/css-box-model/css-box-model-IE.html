@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>IE盒模型测试</title>
+	<style>
+		div{
+			background-color:red;
+			width:300px;
+			height:300px;
+			padding:20px;
+			margin:100px;
+			border:10px solid #000;
+		}
+		/*ie6不支持透明transparent*/
+		.box2{border-color:transparent}
+	</style>
+</head>
+<body>
+	<div class="box1">ie6下，不声明doctype，触发怪异模式，测试IE盒模型,<br/>content尺寸300px*300px，<br/>padding:20px <br/>margin:20 <br/>border:10px</div>
+	<div class="box2">测试IE盒模型,<br/>content尺寸300px*300px，<br/>padding:20px <br/>margin:20 <br/>border:10px</div>
+	<h3>IE盒模型总结：</h3>
+	<ul>
+		<li>IE盒模型Width = contentWidth；</li>
+		<li>IE6 IE7 IE8 IE9，不声明doctype，触发Quirks怪异模式，采用IE盒模型展现。非IE浏览器仍然采用标准模式渲染；</li>
+	</ul>
+	<h3>border区背景色是否填充</h3>
+	<ul>
+		<li>非IE浏览器下，标准模式渲染，div的背景颜色充满了padding和border。border透明时，可发现border区域填充了背景色；</li>
+		<li>IE6 IE7 IE8 IE9在Quirks怪异模式下，border区域都不会填充背景色；</li>
+	</ul>
+</body>
+</html>
