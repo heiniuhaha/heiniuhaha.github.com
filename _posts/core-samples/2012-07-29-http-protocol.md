@@ -1,3 +1,12 @@
+---
+layout: post
+title : 	前端基础点
+description : 都是前端的基础，需要好好掌握。
+category : http
+tags : [http]
+---
+{% include JB/setup %}
+
 此文正在进行中。。。
 
 ###参考文章：
