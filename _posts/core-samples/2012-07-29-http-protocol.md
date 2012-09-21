@@ -1,9 +1,9 @@
 ---
 layout: post
-title : 	前端基础点
-description : 都是前端的基础，需要好好掌握。
+title : http协议介绍
+description : 前端开发工程师得知道http协议才能写出性能更好，更优化的代码。
 category : http
-tags : [http]
+tags : [http, protocol, browser]
 ---
 {% include JB/setup %}
 
