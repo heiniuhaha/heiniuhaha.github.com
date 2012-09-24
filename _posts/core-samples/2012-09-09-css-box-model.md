@@ -11,9 +11,9 @@ css:层叠样式表（Cascading Style Sheets）
 
 ###demo：
 
-- [http://www.heiniuhaha.com/test/css-box-model/css-box-model-W3C.html](http://www.heiniuhaha.com/test/css-box-model/css-box-model-W3C.html) 声明doctype
+- [http://www.heiniuhaha.com/demo/css-box-model/css-box-model-W3C.html](http://www.heiniuhaha.com/demo/css-box-model/css-box-model-W3C.html) 声明doctype
 
-- [http://www.heiniuhaha.com/test/css-box-model/css-box-model-IE.html](http://www.heiniuhaha.com/test/css-box-model/css-box-model-IE.html) 不声明doctype
+- [http://www.heiniuhaha.com/demo/css-box-model/css-box-model-IE.html](http://www.heiniuhaha.com/demo/css-box-model/css-box-model-IE.html) 不声明doctype
 
 code ：
 
@@ -35,20 +35,20 @@ code ：
 	
 chrome测试图：
 
-![chrome测试图](http://www.heiniuhaha.com/test/css-box-model/css-box-model-chrome.png)
+![chrome测试图](http://www.heiniuhaha.com/demo/css-box-model/css-box-model-chrome.png)
 
 IE6测试图-IE盒模型和W3C标准盒模型对比图：
 
-![IE6测试图-标准和非标准](http://www.heiniuhaha.com/test/css-box-model/box-ie6.png)
+![IE6测试图-标准和非标准](http://www.heiniuhaha.com/demo/css-box-model/box-ie6.png)
 
 ###盒模型示意图
 - ####IE盒模型
 
-![IE盒模型](http://www.heiniuhaha.com/test/css-box-model/p2.gif)
+![IE盒模型](http://www.heiniuhaha.com/demo/css-box-model/p2.gif)
 
 - ####W3C标准盒模型
 
-![W3C标准盒模型](http://www.heiniuhaha.com/test/css-box-model/p3.gif)
+![W3C标准盒模型](http://www.heiniuhaha.com/demo/css-box-model/p3.gif)
 
 ###总结：
 
@@ -68,11 +68,11 @@ IE6 IE7 IE8 IE9 在标准模式下，盒模型也是一模一样的，都是W3C�
 ###border区域是否填充背景色
 border区域不填充背景色图
 
-![border区域不填充背景色](http://www.heiniuhaha.com/test/css-box-model/border-transparent-ie7.png)
+![border区域不填充背景色](http://www.heiniuhaha.com/demo/css-box-model/border-transparent-ie7.png)
 
 border区域填充背景色图
 
-![border区域填充背景色](http://www.heiniuhaha.com/test/css-box-model/border-transparent-ie8.png)
+![border区域填充背景色](http://www.heiniuhaha.com/demo/css-box-model/border-transparent-ie8.png)
 
 ####标准模式下
 - 非IE浏览器下，div的背景颜色充满了padding和border。border透明时，可发现border区域填充了背景色。
