@@ -1,3 +1,12 @@
+---
+layout: post
+title : ECMAScript5初探
+description : 09年底，ECMAScript 5也即众所周知的JavaScript正式发布了。ECMAScript5 给出了一系列新的API接口，这些接口在新的浏览器中大部分是被支持的，IE9，Chrome，FirFor都支持，也有少量API不是所有浏览器都支持，以下内容仅介绍大部分被支持的API。利用新的API我们可以设计出非常靠谱的类，而且还能保持原有的javaScript的风格。
+category : ie
+tags : [ECMAScript5, javascript, oop, 面向对象]
+---
+{% include JB/setup %}
+
 Javascript是一个类C的语言，他的面向对象的东西相对于C++/Java比较奇怪，但是其的确相当的强大，在 [Todd 同学](http://www.
 cnblogs.com/weidagang2046/)的“[对象的消息模型](http://coolshell.cn/articles/5202.html)
 ”一文中我们已经可以看到一些端倪了。这两天有个前同事总在问我Javascript面向对象的东西，所以，索性写篇文章让他看去吧，这里这篇文章主要想从一个整体的
@@ -639,5 +648,6 @@ ript来并没有支持得特别好，不好我们依然可以搞定个事。
   * W3CSchool
   * MDN (Mozilla Developer Network)
   * MSDN (Microsoft Software Development Network)
-  * [Understanding Javascript OOP](http://killdream.github.com/blog/2011/10/understanding-javascript-oop/).
+  * Understanding Javascript OOP[http://killdream.github.com/blog/2011/10/understanding-javascript-oop/](http://killdream.github.com/blog/2011/10/understanding-javascript-oop/).
+  * 基于ECMAScript5的继承链实现[http://www.oschina.net/code/snippet_58016_4157](http://www.oschina.net/code/snippet_58016_4157)
 
