@@ -2,7 +2,7 @@
 layout: post
 title : ECMAScript5初探
 description : 09年底，ECMAScript 5也即众所周知的JavaScript正式发布了。ECMAScript5 给出了一系列新的API接口，这些接口在新的浏览器中大部分是被支持的，IE9，Chrome，FirFor都支持，也有少量API不是所有浏览器都支持，以下内容仅介绍大部分被支持的API。利用新的API我们可以设计出非常靠谱的类，而且还能保持原有的javaScript的风格。
-category : ie
+category : javascript
 tags : [ECMAScript5, javascript, oop, 面向对象]
 ---
 {% include JB/setup %}
