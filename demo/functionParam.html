@@ -1,0 +1,35 @@
+<button id="J_Btn1">1</button>
+<button id="J_Btn2">2</button>
+<button id="J_Btn3">3</button>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+/* 公用方法 */
+function showLog(x, okClk){//一个string参数，一个函数参数
+	console.log(x);
+	okClk();//回调函数
+}
+
+//实例化
+$("#J_Btn1").click(function(){
+	var a ="5";
+	showLog("我是第一个字符串", function(){
+		//执行成功后的回调函数
+		console.log(a);
+		console.log("我是第一个按钮")
+	});
+});
+$("#J_Btn2").click(function(){
+	showLog("我是第二个字符串", function(){
+		//执行成功后的回调函数
+		console.log("我是第二个按钮")
+	});
+
+});
+$("#J_Btn3").click(function(){
+	showLog("我是第三个字符串", function(){
+		//执行成功后的回调函数
+		console.log("我是第三个按钮")
+	});
+
+});
+</script>
