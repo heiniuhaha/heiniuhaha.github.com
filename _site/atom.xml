@@ -4,7 +4,7 @@
  <title>黑妞haha-前端开发</title>
  <link href="http://heiniuhaha.github.com/atom.xml" rel="self"/>
  <link href="http://heiniuhaha.github.com"/>
- <updated>2012-11-07T13:11:41+08:00</updated>
+ <updated>2012-11-07T13:13:01+08:00</updated>
  <id>http://heiniuhaha.github.com</id>
  <author>
    <name>宋建敏</name>
@@ -19,7 +19,7 @@
    <id>http://heiniuhaha.github.com/f2e/2012/11/07/molo-f2e-standard</id>
    <content type="html">&lt;h3 id='molo'&gt;molo前端规范&lt;/h3&gt;
 
-&lt;h4 id='id3833'&gt;一、命名规范：&lt;/h4&gt;
+&lt;h4 id='id3951'&gt;一、命名规范：&lt;/h4&gt;
 
 &lt;p&gt;- 公共组件因高度重用，命名从简，不要加前缀&lt;/p&gt;
 
@@ -29,7 +29,7 @@
 &lt;li&gt;频道下的页面命名清晰，不怕命名长，怕命名冲突。命名长，css选择时可尽量不使用子选择符，确保css优先级权重足够低。方便扩展时覆盖操作。 - 命名有意义，尽量采用英文。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id='id3834'&gt;二、注释规范&lt;/h4&gt;
+&lt;h4 id='id3952'&gt;二、注释规范&lt;/h4&gt;
 
 &lt;p&gt;- 公共组件需要在文件头部加上注释说明：&lt;/p&gt;
 
@@ -51,7 +51,7 @@
 &lt;pre&gt;&lt;code&gt;	//代码用途
 	var name = &amp;quot;abc&amp;quot;;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id='id3835'&gt;公共组件开发规范&lt;/h4&gt;
+&lt;h4 id='id3953'&gt;公共组件开发规范&lt;/h4&gt;
 
 &lt;h4 id='html'&gt;HTML规范&lt;/h4&gt;
 
@@ -212,9 +212,9 @@ ${&amp;#39;abc&amp;#39;?substring(2, 3)} //c&lt;/code&gt;&lt;/pre&gt;
  &amp;lt;/body&amp;gt;  
 &amp;lt;/html&amp;gt;  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id='12int'&gt;12.使用内建的int（后面讲述）获得整数部分&lt;/h3&gt;
+&lt;h3 id='12int'&gt;12.使用内建的int获得整数部分&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;如`${1.1?int} = 1`  &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如&lt;code&gt;${1.1?int} = 1&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id='13'&gt;13.比较操作符：&lt;/h3&gt;
 
@@ -368,7 +368,7 @@ ${or?string(&amp;quot;You are right!&amp;quot;, &amp;quot;You are wrong!&amp;quo
    <id>http://heiniuhaha.github.com/javascript/2012/10/26/javascript-essence</id>
    <content type="html">&lt;h2 id='javascript'&gt;javascript高级特性学习笔记&lt;/h2&gt;
 
-&lt;h3 id='id3831'&gt;编程理念:&lt;/h3&gt;
+&lt;h3 id='id3949'&gt;编程理念:&lt;/h3&gt;
 
 &lt;p&gt;面向对象、函数式编程、闭包、动态绑定、作用域&lt;/p&gt;
 
@@ -431,7 +431,7 @@ console.log(counter2());//2&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id='3'&gt;3、对象&lt;/h3&gt;
 
-&lt;h3 id='id3832'&gt;什么是前端，前端的意义&lt;/h3&gt;</content>
+&lt;h3 id='id3950'&gt;什么是前端，前端的意义&lt;/h3&gt;</content>
  </entry>
  
  <entry>
@@ -439,11 +439,11 @@ console.log(counter2());//2&lt;/code&gt;&lt;/pre&gt;
    <link href="http://heiniuhaha.github.com/javascript/2012/09/20/oop"/>
    <updated>2012-09-20T00:00:00+08:00</updated>
    <id>http://heiniuhaha.github.com/javascript/2012/09/20/oop</id>
-   <content type="html">&lt;h3 id='id3823'&gt;什么是面向对象&lt;/h3&gt;
+   <content type="html">&lt;h3 id='id3941'&gt;什么是面向对象&lt;/h3&gt;
 
 &lt;p&gt;面向对象最基本的三大特性是继承、封装、多态，javascript不是面向对象的语言，但能实现继承和封装两个特性。 js中的对象&lt;/p&gt;
 
-&lt;h3 id='id3824'&gt;弱类型&lt;/h3&gt;
+&lt;h3 id='id3942'&gt;弱类型&lt;/h3&gt;
 
 &lt;p&gt;定义变量类型：&lt;/p&gt;
 
@@ -515,7 +515,7 @@ func(&amp;quot;blah2&amp;quot;);
 var func = new Function(&amp;quot;x&amp;quot;, &amp;quot;alert(x);&amp;quot;);
 func(&amp;quot;blah3&amp;quot;);	&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id='id3825'&gt;使用对象初始化器创建对象&lt;/h3&gt;
+&lt;h3 id='id3943'&gt;使用对象初始化器创建对象&lt;/h3&gt;
 
 &lt;p&gt;code1：&lt;/p&gt;
 
@@ -551,7 +551,7 @@ myConstructor.alertName();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;- 优点：简洁明了； - 缺点：创建对象的代码是一次性的&lt;/p&gt;
 
-&lt;h3 id='id3826'&gt;使用构造函数创建对象&lt;/h3&gt;
+&lt;h3 id='id3944'&gt;使用构造函数创建对象&lt;/h3&gt;
 
 &lt;p&gt;定义构造函数，而不是类&lt;/p&gt;
 
@@ -654,7 +654,7 @@ someuser.display.call(myself, &amp;#39;fighting!&amp;#39;);
 
 &lt;p&gt;- 优点：可创建出多个规划好的对象，有若干个固定的属性、方法，并能初始化实例化。 - 缺点：复杂些，有上下文对象（this指针），即被调用函数所处的环境。&lt;/p&gt;
 
-&lt;h3 id='id3827'&gt;使用原型和构造函数共同生成对象&lt;/h3&gt;
+&lt;h3 id='id3945'&gt;使用原型和构造函数共同生成对象&lt;/h3&gt;
 
 &lt;p&gt;什么是原型链？&lt;/p&gt;
 
@@ -698,7 +698,7 @@ objB.sayName();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;- 除非必须用构造函数闭包，否则尽量用原型定义成员函数，可减少开销 - 尽量在构造函数内定义一般成员，尤其是对象或数组，因为用原型定义的成员是多个实例共享的。&lt;/p&gt;
 
-&lt;h3 id='id3828'&gt;原型链机制：&lt;/h3&gt;
+&lt;h3 id='id3946'&gt;原型链机制：&lt;/h3&gt;
 
 &lt;p&gt;javascript分为三类对象：&lt;/p&gt;
 
@@ -719,7 +719,7 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;关系图如下： &lt;img alt='原型链关系图' src='/images/prototype-1024x702.png' /&gt;&lt;/p&gt;
 
-&lt;h3 id='id3829'&gt;公有、私有、特权、静态总结&lt;/h3&gt;
+&lt;h3 id='id3947'&gt;公有、私有、特权、静态总结&lt;/h3&gt;
 
 &lt;p&gt;- 私有和特权成员在函数的内部，他们会被带到函数的每一个实例中生成新的副本，因而将占用大量的内存。&lt;/p&gt;
 
@@ -733,7 +733,7 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;私有成员命名规范上用下划线表示，私有成员可避免安全隐患，防止使用者修改某个属性，导致对象内部数据的一致性受到破坏。如&lt;code&gt;_myPrivateProp&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id='id3830'&gt;参考&lt;/h3&gt;
+&lt;h3 id='id3948'&gt;参考&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://msdn.microsoft.com/zh-cn/magazine/cc163419.aspx'&gt;http://msdn.microsoft.com/zh-cn/magazine/cc163419.aspx&lt;/a&gt;&lt;/li&gt;
@@ -787,7 +787,7 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img alt='IE6测试图-标准和非标准' src='http://www.heiniuhaha.com/demo/css-box-model/box-ie6.png' /&gt;&lt;/p&gt;
 
-&lt;h3 id='id3816'&gt;盒模型示意图&lt;/h3&gt;
+&lt;h3 id='id3934'&gt;盒模型示意图&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;IE盒模型&lt;/li&gt;
@@ -801,7 +801,7 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img alt='W3C标准盒模型' src='http://www.heiniuhaha.com/demo/css-box-model/p3.gif' /&gt;&lt;/p&gt;
 
-&lt;h3 id='id3817'&gt;总结：&lt;/h3&gt;
+&lt;h3 id='id3935'&gt;总结：&lt;/h3&gt;
 
 &lt;p&gt;IE盒模型占总空间=contentWidth，内容区只占了一小部分空间；&lt;/p&gt;
 
@@ -809,7 +809,7 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;同时：div的背景颜色充满了padding和border区域，border透明时，可发现背景颜色就是div的bgcolor.（ie6不支持透明transparent）&lt;/p&gt;
 
-&lt;h3 id='id3818'&gt;触发盒模型&lt;/h3&gt;
+&lt;h3 id='id3936'&gt;触发盒模型&lt;/h3&gt;
 
 &lt;p&gt;IE6 IE7 IE8 IE9 在Quirks怪异模式下，盒模型是一模一样的，都是IE盒模型，即总width=width;&lt;/p&gt;
 
@@ -827,7 +827,7 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img alt='border区域填充背景色' src='http://www.heiniuhaha.com/demo/css-box-model/border-transparent-ie8.png' /&gt;&lt;/p&gt;
 
-&lt;h4 id='id3819'&gt;标准模式下&lt;/h4&gt;
+&lt;h4 id='id3937'&gt;标准模式下&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -843,13 +843,13 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id='id3820'&gt;非标准模式下&lt;/h4&gt;
+&lt;h4 id='id3938'&gt;非标准模式下&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;IE6 IE7 IE8 IE9在Quirks怪异模式下，border区域都不会填充背景色；&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id='id3821'&gt;备注：&lt;/h3&gt;
+&lt;h3 id='id3939'&gt;备注：&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -865,7 +865,7 @@ var obj = new Object();&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id='id3822'&gt;参考&lt;/h3&gt;
+&lt;h3 id='id3940'&gt;参考&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://www.w3schools.com/css/css_boxmodel.asp'&gt;w3schools.com css box model&lt;/a&gt;&lt;/li&gt;
@@ -934,7 +934,7 @@ define(functioin(require, exports, module){
 
 &lt;p&gt;URL,URN是URI的子集.&lt;/p&gt;
 
-&lt;h3 id='id3815'&gt;参考&lt;/h3&gt;
+&lt;h3 id='id3933'&gt;参考&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Module.STATUS的具体含义：&lt;a href='https://github.com/seajs/seajs/issues/303'&gt;https://github.com/seajs/seajs/issues/303&lt;/a&gt;&lt;/li&gt;
@@ -1241,7 +1241,7 @@ seajs.config({
   ]
 });	&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id3813'&gt;条件加载&lt;/h2&gt;
+&lt;h2 id='id3931'&gt;条件加载&lt;/h2&gt;
 
 &lt;p&gt;第一种：把依赖的模块都在 define 头部手工声明，不再依赖 SeaJS 的自动解析功能。这个模块同时依赖 play 和 work 两个模块，加载器会把这两个模块文件都下载下来。如果需要在 require 模块之后串行执行代码，那么只能用这个方式。&lt;/p&gt;
 
@@ -1260,7 +1260,7 @@ seajs.config({
     });
 });&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id3814'&gt;按需加载&lt;/h2&gt;
+&lt;h2 id='id3932'&gt;按需加载&lt;/h2&gt;
 
 &lt;p&gt;很多时候模块并不需要立即加载，等到需要时再加载，性能更好。&lt;/p&gt;
 
@@ -1289,7 +1289,7 @@ define(function(require, exports) {
 
 &lt;p&gt;该页面列举了 SeaJS 中的常用 API。只要掌握这些方法，就可以娴熟地进行模块化开发。&lt;/p&gt;
 
-&lt;h3 id='id3806'&gt;启动模块系统&lt;/h3&gt;
+&lt;h3 id='id3924'&gt;启动模块系统&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;http://modules.seajs.org/seajs/1.2.0/sea.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script&amp;gt;
@@ -1501,7 +1501,7 @@ define(function(require, exports, module) {
 
 &lt;p&gt;以上接口是最常用的，要牢记于心。&lt;/p&gt;
 
-&lt;h3 id='id3807'&gt;可写成如下&lt;/h3&gt;
+&lt;h3 id='id3925'&gt;可写成如下&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;seajs.config({
   alias: {
@@ -1573,7 +1573,7 @@ define(function(require, exports, module) = {
     }
 });&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id3808'&gt;实际使用中&lt;/h2&gt;
+&lt;h2 id='id3926'&gt;实际使用中&lt;/h2&gt;
 
 &lt;p&gt;在工程内使用seajs，以前引用的插件、模块也都要用define的语法重新进行封装，比较麻烦，老代码可以不修改，继续使用就好。但强烈建立花点时间都修改成 CMD 模块，这样对以后的维护，以及页面性能很有好处。不然以后修改起来估计会更麻烦。&lt;/p&gt;
 
@@ -1613,7 +1613,7 @@ define(function(require, exports, module) = {
 &lt;li&gt;&lt;a href='https://github.com/seajs/seajs/issues/266'&gt;快速参考&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id='id3809'&gt;第三方库&lt;/h2&gt;
+&lt;h2 id='id3927'&gt;第三方库&lt;/h2&gt;
 
 &lt;p&gt;SeaJS 提供了一个类似于npm的管理工具，里面有他们改造好的第三方库，你可以在这里找找是否有适合的:&lt;/p&gt;
 
@@ -1625,7 +1625,7 @@ define(function(require, exports, module) = {
 
 &lt;h2 id='seajs_blog_'&gt;seajs blog 等文档&lt;/h2&gt;
 
-&lt;h3 id='id3810'&gt;初级入门&lt;/h3&gt;
+&lt;h3 id='id3928'&gt;初级入门&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://www.cnblogs.com/leoo2sk/archive/2011/06/27/write-javascript-with-seajs.html'&gt;使用 SeaJS 实现模块化 JavaScript 开发&lt;/a&gt;&lt;/li&gt;
@@ -1645,7 +1645,7 @@ define(function(require, exports, module) = {
 &lt;li&gt;&lt;a href='http://lifesinger.wordpress.com/2011/04/05/seajs-080-released/'&gt;海纳百川、有容乃大 - 玉伯&lt;/a&gt; -墙外&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id='id3811'&gt;中级使用&lt;/h3&gt;
+&lt;h3 id='id3929'&gt;中级使用&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://cyj.me/why-seajs/zh/'&gt;seajs所为何-逸才&lt;/a&gt;&lt;/li&gt;
@@ -1673,7 +1673,7 @@ define(function(require, exports, module) = {
 &lt;li&gt;&lt;a href='http://www.heiniuhaha.com/file/sea-zh.js'&gt;seajs中文版源码&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id='id3812'&gt;高级探索&lt;/h3&gt;
+&lt;h3 id='id3930'&gt;高级探索&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://hax.iteye.com/blog/1146699'&gt;shim是应该抛异常还是应该fail silently？-hax&lt;/a&gt; -墙外&lt;/li&gt;
@@ -1691,7 +1691,7 @@ define(function(require, exports, module) = {
    <id>http://heiniuhaha.github.com/lessons/2012/08/09/use-jekyll-build-blog</id>
    <content type="html">&lt;p&gt;也来讲讲怎么使用github pages做blog环境&lt;/p&gt;
 
-&lt;h2 id='id3799'&gt;优点&lt;/h2&gt;
+&lt;h2 id='id3917'&gt;优点&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;空间免费，github托管，稳定又安全，遭遇过空间商跑路的朋友是不是想起伤心往事；&lt;/p&gt;
@@ -1709,7 +1709,7 @@ define(function(require, exports, module) = {
 &lt;p&gt;文章用markedown编写，以前遭受排版困扰的亲们是不是很激动；&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id='id3800'&gt;购买域名&lt;/h2&gt;
+&lt;h2 id='id3918'&gt;购买域名&lt;/h2&gt;
 
 &lt;p&gt;可以去&lt;a href='http://www.net.cn'&gt;万网&lt;/a&gt;，这两天正好在促销. &lt;img alt='net-cn-sales' src='/assets/themes/twitter/pic/net-cn-sales.png' /&gt;&lt;/p&gt;
 
@@ -1721,7 +1721,7 @@ define(function(require, exports, module) = {
 
 &lt;p&gt;参考最底下的参考文章，省略。。。&lt;/p&gt;
 
-&lt;h2 id='id3801'&gt;命令&lt;/h2&gt;
+&lt;h2 id='id3919'&gt;命令&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;
@@ -1731,13 +1731,13 @@ define(function(require, exports, module) = {
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id3802'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id='id3920'&gt;定位到目录&lt;code&gt;heiniu.github.com&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cd .ssh/heiniuhaha.github.com&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;h3 id='id3803'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
+&lt;h3 id='id3921'&gt;使用&lt;code&gt;rake&lt;/code&gt;命令&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;rake page           # Create a new page.
 rake post           # Begin a new post in ./_posts
@@ -1758,7 +1758,7 @@ git commit . -m &amp;#39;just another commit&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id='id3804'&gt;日常发布完整命令&lt;/h2&gt;
+&lt;h2 id='id3922'&gt;日常发布完整命令&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone git@github.com:heiniuhaha/heiniuhaha.github.com.git//本地如果无远程代码，先做这步，不然就忽略
 cd .ssh/heiniuhaha.github.com//定位到你blog的目录下
@@ -1768,7 +1768,7 @@ git add .//添加远程不存在的git文件
 git commit * -m &amp;quot;what I want told to someone&amp;quot;
 git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id3805'&gt;参考文章&lt;/h2&gt;
+&lt;h2 id='id3923'&gt;参考文章&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -1860,7 +1860,7 @@ git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
    <id>http://heiniuhaha.github.com/ie/2012/08/05/just-ie6-loadjs</id>
    <content type="html">&lt;p&gt;有朋友问怎么让一个js文件只有是ie6的时候才加载，特记录下:&lt;/p&gt;
 
-&lt;h3 id='id3795'&gt;方式一：利用&lt;code&gt;[if IE 6]&lt;/code&gt;的判断方式&lt;/h3&gt;
+&lt;h3 id='id3913'&gt;方式一：利用&lt;code&gt;[if IE 6]&lt;/code&gt;的判断方式&lt;/h3&gt;
 
 &lt;h4 id='code'&gt;code&lt;/h4&gt;
 
@@ -1870,7 +1870,7 @@ git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;缺点：阻塞加载&lt;/p&gt;
 
-&lt;h4 id='id3796'&gt;&lt;code&gt;[if IE]&lt;/code&gt;的浏览器判断&lt;/h4&gt;
+&lt;h4 id='id3914'&gt;&lt;code&gt;[if IE]&lt;/code&gt;的浏览器判断&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;1. &amp;lt;!--[if !IE]&amp;gt;除IE外都可识别 &amp;lt;![endif]--&amp;gt;
 2. &amp;lt;!--[if IE]&amp;gt; 所有的IE可识别 &amp;lt;![endif]--&amp;gt;
@@ -1920,9 +1920,9 @@ git push origin master //更新到远程服务器上&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;缺点：代码量多，执行js效率差，如果是需要立即执行渲染的程序，此方式不适合。&lt;/p&gt;
 
-&lt;h3 id='id3797'&gt;两种方式性能评测&lt;/h3&gt;
+&lt;h3 id='id3915'&gt;两种方式性能评测&lt;/h3&gt;
 
-&lt;h3 id='id3798'&gt;参考&lt;/h3&gt;
+&lt;h3 id='id3916'&gt;参考&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='http://msdn2.microsoft.com/en-us/library/ms537512.aspx'&gt;MSDN&lt;/a&gt;&lt;/li&gt;
@@ -1942,7 +1942,7 @@ cnblogs.com/weidagang2046/'&gt;Todd 同学&lt;/a&gt;的“&lt;a href='http://coo
 &lt;p&gt;另，这篇文章主要基于 &lt;a href='http://www.ecma-
 international.org/publications/standards/Ecma-262.htm'&gt;ECMAScript 5&lt;/a&gt;， 旨在介绍新技术。关于兼容性的东西，请看最后一节。&lt;/p&gt;
 
-&lt;h4 id='id3790'&gt;初探&lt;/h4&gt;
+&lt;h4 id='id3908'&gt;初探&lt;/h4&gt;
 
 &lt;p&gt;我们知道Javascript中的变量定义基本如下：&lt;/p&gt;
 
@@ -2119,7 +2119,7 @@ alert(chenhao.age);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;2）动态地为一个对象加属性。比如：一些HTML的DOM对像。&lt;/p&gt;
 
-&lt;h4 id='id3791'&gt;查看对象属性配置&lt;/h4&gt;
+&lt;h4 id='id3909'&gt;查看对象属性配置&lt;/h4&gt;
 
 &lt;p&gt;如果查看并管理对象的这些配置，下面有个程序可以输出对象的属性和配置等东西：&lt;/p&gt;
 
@@ -2279,7 +2279,7 @@ Student.sayHello = function (person) {
 
 &lt;p&gt;这个很强大吧。&lt;/p&gt;
 
-&lt;h4 id='id3792'&gt;组合&lt;/h4&gt;
+&lt;h4 id='id3910'&gt;组合&lt;/h4&gt;
 
 &lt;p&gt;上面的那个东西还不能满足我们的要求，我们可能希望这些对象能真正的组合起来。为什么要组合？因为我们都知道是这是OO设计的最重要的东西。不过，这对于Javasc ript来并没有支持得特别好，不好我们依然可以搞定个事。&lt;/p&gt;
 
@@ -2438,7 +2438,7 @@ var me = new Student(
 );
 document.write(me.sayHello());&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id='id3793'&gt;兼容性&lt;/h4&gt;
+&lt;h4 id='id3911'&gt;兼容性&lt;/h4&gt;
 
 &lt;p&gt;上面的这些代码并不一定能在所有的浏览器下都能运行，因为上面这些代码遵循 ECMAScript 5 的规范，关于ECMAScript 5 的浏览器兼容列表，你可以看这里“&lt;a href='http://kangax.github.com/es5-compat-table/'&gt;ES5浏览器兼容表&lt;/a&gt;”。&lt;/p&gt;
 
@@ -2502,7 +2502,7 @@ function bind(fn, bound_this) { var bound_args
         return fn.apply(bound_this, args) }
 }&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id='id3794'&gt;参考&lt;/h4&gt;
+&lt;h4 id='id3912'&gt;参考&lt;/h4&gt;
 
 &lt;p&gt;* W3CSchool * MDN (Mozilla Developer Network) * MSDN (Microsoft Software Development Network) * Understanding Javascript OOP&lt;a href='http://killdream.github.com/blog/2011/10/understanding-javascript-oop/'&gt;http://killdream.github.com/blog/2011/10/understanding-javascript-oop/&lt;/a&gt;. * 基于ECMAScript5的继承链实现&lt;a href='http://www.oschina.net/code/snippet_58016_4157'&gt;http://www.oschina.net/code/snippet_58016_4157&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
@@ -2659,7 +2659,7 @@ if ( array[ i ] === elem ) {
         return -1;  //如果数组里没有这个元素, 返回-1.  
     }  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id='id3786'&gt;数据缓存&lt;/h3&gt;
+&lt;h3 id='id3904'&gt;数据缓存&lt;/h3&gt;
 
 &lt;p&gt;jQuery.data&lt;/p&gt;
 
@@ -2872,7 +2872,7 @@ alert (value)  &lt;/code&gt;&lt;/pre&gt;
         }  
     }  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id='id3787'&gt;队列控制&lt;/h3&gt;
+&lt;h3 id='id3905'&gt;队列控制&lt;/h3&gt;
 
 &lt;p&gt;队列控制也是jquery中很有特点的一个功能. 可以用来管理动画或者事件等的执行顺序. queue和dequeue主要为动画服务. 比如在jquery的动画里, 因为javascript的单线程异步机制, 如果要管理一批动画的执行顺序, 而不是让它们一起在屏幕上飞舞. 一般我们是一个一个的把下个动画写在上个动画的回调函数中, 意味着如果要让十个动画按次序执行. 至少要写9个回调函数. 好吧我承认我做过这样的事, 直接导致我的视力从5.2变为5.1.&lt;/p&gt;
 
@@ -3004,7 +3004,7 @@ return q || [];
 
 &lt;p&gt;用一个空数组代替了原来的队列.&lt;/p&gt;
 
-&lt;h3 id='id3788'&gt;多库共存&lt;/h3&gt;
+&lt;h3 id='id3906'&gt;多库共存&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;jQuery.noConflict&lt;/code&gt; 将变量$的控制权让渡给上一个实现它的那个库. 可能很多人都被多库共存时的$变量问题困扰过. 比如你先引入了prototype库,然后又引入了jquery.因为jquery的$会覆盖prototype的$. 现在想调用prototype的$怎么办呢, noConflict方法就派上用场了. Jquery代码里最开始就有一句&lt;code&gt;_$ = window.$ &lt;/code&gt;, 在加载的时候就用&lt;code&gt;_$&lt;/code&gt;来引用原来的&lt;code&gt;$&lt;/code&gt; (比如现在就是prototype库里的$).&lt;/p&gt;
 
@@ -3019,7 +3019,7 @@ return q || [];
         return jQuery;  
     }  &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id='id3789'&gt;继承和拷贝&lt;/h4&gt;
+&lt;h4 id='id3907'&gt;继承和拷贝&lt;/h4&gt;
 
 &lt;p&gt;jQuery.prototype.extend和jQuery.extend 扩展 jQuery 元素集来提供新的方法, 或者把一个对象的属性拷贝到另外一个对象上. 通常javascript的继承实现有4种方式. 1 构造继承 2 prototype继承 3 属性拷贝 4 实例继承(这个有点特殊, 主要用于继承内置对象)&lt;/p&gt;
 
@@ -3121,11 +3121,11 @@ return q || [];
    <link href="http://heiniuhaha.github.com/f2e/2012/07/30/f2e-master"/>
    <updated>2012-07-30T00:00:00+08:00</updated>
    <id>http://heiniuhaha.github.com/f2e/2012/07/30/f2e-master</id>
-   <content type="html">&lt;h2 id='id3784'&gt;牛人列表&lt;/h2&gt;
+   <content type="html">&lt;h2 id='id3902'&gt;牛人列表&lt;/h2&gt;
 
 &lt;p&gt;该页面列举了我仰慕的前端牛人和前端牛逼团队，以他们为榜样，站在巨人的肩膀上学习，能让我们再前端开发道路上更顺利。也推荐给大家学习的目标。会持续更新&amp;#8230;&lt;/p&gt;
 
-&lt;h3 id='id3785'&gt;前端架构&lt;/h3&gt;
+&lt;h3 id='id3903'&gt;前端架构&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -3261,7 +3261,7 @@ return q || [];
    <id>http://heiniuhaha.github.com/http/2012/07/29/http-protocol</id>
    <content type="html">&lt;p&gt;此文正在进行中。。。&lt;/p&gt;
 
-&lt;h3 id='id3783'&gt;参考文章：&lt;/h3&gt;
+&lt;h3 id='id3901'&gt;参考文章：&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -3319,7 +3319,7 @@ return q || [];
    <link href="http://heiniuhaha.github.com/css/2012/07/11/f2e-interview"/>
    <updated>2012-07-11T00:00:00+08:00</updated>
    <id>http://heiniuhaha.github.com/css/2012/07/11/f2e-interview</id>
-   <content type="html">&lt;h3 id='id3778'&gt;★★★★★功夫下在和工作有关的地方★★★★★&lt;/h3&gt;
+   <content type="html">&lt;h3 id='id3896'&gt;★★★★★功夫下在和工作有关的地方★★★★★&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;1、用最优的方案实现需求。在自己的已有知识结构、能力、经验上用最好的方式实现需求，在此基础上努力搜寻业界相关的解决方案比较优劣，选出最佳的方案，最终实现需求。&lt;/li&gt;
@@ -3347,7 +3347,7 @@ return q || [];
 &lt;li&gt;table-footer-group 显示在任何表格行和行组合之后，在底部标题前。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id='id3779'&gt;★清除浮动与闭合浮动的不同点&lt;/h4&gt;
+&lt;h4 id='id3897'&gt;★清除浮动与闭合浮动的不同点&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href='http://www.cnblogs.com/mofish/archive/2012/05/14/2499400.html'&gt;http://www.cnblogs.com/mofish/archive/2012/05/14/2499400.html&lt;/a&gt;&lt;/p&gt;
 
@@ -3385,7 +3385,7 @@ return q || [];
 
 &lt;p&gt;(firebug,IE开发人员工具,opera, chrome是当中最好的)&lt;/p&gt;
 
-&lt;h4 id='id3780'&gt;★如何判定一个脚本是否加载成功&lt;/h4&gt;
+&lt;h4 id='id3898'&gt;★如何判定一个脚本是否加载成功&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;var script = document.createElement(&amp;#39;script&amp;#39;) ;
 var head = document.getElementsByTagName(&amp;quot;head&amp;quot;)[0];
@@ -3416,7 +3416,7 @@ script.src = &amp;#39;http://files.cnblogs.com/rubylouvre/html5.js&amp;#39;&lt;/
 
 &lt;p&gt;(一个是2&lt;em&gt;3矩阵,一个是4&lt;/em&gt;4矩阵,transform3D支持GPU硬件加速,更加流畅,建议用transform3D模拟transform2D)&lt;/p&gt;
 
-&lt;h4 id='id3781'&gt;★指出{}+&lt;span /&gt;与&lt;span /&gt;+{}的值,为什么&lt;/h4&gt;
+&lt;h4 id='id3899'&gt;★指出{}+&lt;span /&gt;与&lt;span /&gt;+{}的值,为什么&lt;/h4&gt;
 
 &lt;p&gt;(第一个为0,因为{}放在语句在前面,JS引擎认为它只是一个块,不是空对象,相当于+&lt;span /&gt; ===&amp;gt; +&amp;#8221;&amp;#8221; ==&amp;gt; 0, 第二个是&amp;#8221;&lt;span&gt;object Object&lt;/span&gt;&amp;#8220;,两者取toString(),然后相加)&lt;/p&gt;
 
@@ -3424,7 +3424,7 @@ script.src = &amp;#39;http://files.cnblogs.com/rubylouvre/html5.js&amp;#39;&lt;/
 
 &lt;p&gt;&lt;a href='http://www.otakustay.com/browser-strategy-loading-external-resource/'&gt;http://www.otakustay.com/browser-strategy-loading-external-resource/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id='id3782'&gt;★说一下最近非常流行模块加载,大概是怎么实现的,有什么好处&lt;/h4&gt;
+&lt;h4 id='id3900'&gt;★说一下最近非常流行模块加载,大概是怎么实现的,有什么好处&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href='http://www.cnblogs.com/muguaworld/archive/2011/11/27/2265356.html'&gt;http://www.cnblogs.com/muguaworld/archive/2011/11/27/2265356.html&lt;/a&gt;&lt;/p&gt;
 
@@ -3757,7 +3757,7 @@ var oCar = new Car();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;伪元素有：:first-line，:first-letter，:before，:after&lt;/p&gt;
 
-&lt;h3 id='id3777'&gt;参考&lt;/h3&gt;
+&lt;h3 id='id3895'&gt;参考&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href='http://sunflowamedia.com/blog/learn-pseudo-element/'&gt;学习和认识CSS伪元素&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
