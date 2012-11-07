@@ -37,16 +37,16 @@ tags : [seajs, 依赖, 模块, 原理, 异步加载, cache, 接口]
 此处参考玉伯的回答：
 >我对模块调用的理解是，调用是指获取某个模块的接口。在 SeaJS 里，只有 seajs.use, require.async, 和 require 会产生
 模块调用，比如：
-<code>var a = require('./a')</code>
+`var a = require('./a')`
 在执行 require('./a') 时，会获取模块的接口，如果是第一次调用，会初始化模块 a，以后再调用时，直接返回模块 a 的接口
 define 只是注册模块信息，比如打包之后：
-<code>define(id, deps, factory)</code>
+`define(id, deps, factory)`
 是注册了一个模块到 seajs.cache 中，define 类似：
-<code>seajs.cache[id] = { id: id, dependencies: deps, factory: factory }</code>
+`seajs.cache[id] = { id: id, dependencies: deps, factory: factory }`
 
 >是纯注册信息。
 
->而 <code>require('./a')</code> 时，才会执行 <code>seajs.cache['a'].factory</code>, 执行后得到 <code>seajs.cache['a'].exports</code>
+>而 `require('./a')` 时，才会执行 `seajs.cache['a'].factory`, 执行后得到 `seajs.cache['a'].exports`
 
 >
 

@@ -26,9 +26,9 @@ tags : [javascript, oop, prototype, 继承, 封装, 对象, 函数, 原型, 作�
 
 **全局作用域：**
 
-- 最外层定义的变量，如 <code>var global;</code>
-- 全局对象的属性，如<code>$.util.pagin</code>
-- 任何地方隐式定义的变量（未定义直接赋值），如<code>global="aaa"</code>
+- 最外层定义的变量，如 `var global;`
+- 全局对象的属性，如`$.util.pagin`
+- 任何地方隐式定义的变量（未定义直接赋值），如`global="aaa"`
 
 ###2、闭包
 **定义：**

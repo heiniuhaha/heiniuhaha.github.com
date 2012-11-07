@@ -7,9 +7,9 @@ tags : [css, 伪元素, 伪类]
 ---
 {% include JB/setup %}
 
-####单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。
+####单冒号(`:`)用于CSS3伪类，双冒号(`::`)用于CSS3伪元素。
 
-::selection是CSS3里的伪元素（pseudo-elements）
+`::selection`是CSS3里的伪元素（pseudo-elements）
 
 一个冒号是伪类，两个冒号是伪元素
 

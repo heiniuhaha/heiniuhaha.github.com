@@ -114,8 +114,8 @@ javascript块:
 
 ###9.freemarker中如何截取字符串
 
-<code>exp?substring(from, toExclusive)</code> 
-<code>exp?substring(from)</code> 
+`exp?substring(from, toExclusive)` 
+`exp?substring(from)` 
 实例：
 
 	${'abc'?substring(0)}//abc
@@ -143,13 +143,13 @@ javascript块:
 	</html>  
 
 ###12.使用内建的int（后面讲述）获得整数部分  
-    如<code>${1.1?int} = 1</code>  
+    如`${1.1?int} = 1`  
 
 ###13.比较操作符：  
 - 使用=（或==，完全相等）测试两个值是否相等，使用!= 测试两个值是否不相等。  
 - 对数字和日期可以使用<、<=、>和>=，但不能用于字符串  
 - 由于Freemarker会将>解释成FTL标记的结束字符，所以对于>和>=可以使用括号来避免这种情况，
-例如<#if (x > y)>，另一种替代的方法是，使用<code>lt</code>、<code>lte</code>、<code>gt</code>和<code>gte</code>来替代<、<=、>和>=  
+例如<#if (x > y)>，另一种替代的方法是，使用`lt`、`lte`、`gt`和`gte`来替代<、<=、>和>=  
 
 ###14.内建函数：  
 
@@ -228,14 +228,14 @@ javascript块:
 	<@greet person="Fred" color="black"/>
 其中参数的次序是无关的，只能使用在macro指令中定义的参数，并且对所有参数赋值，所以下面的代码是错误的：  
 只能使用在macro指令中定义的参数，并且对所有参数赋值，多了或者少了都会出错的，完全赋值。
-如：<code><@greet person="Fred"/></code>为错。  
+如：`<@greet person="Fred"/>`为错。  
 
 可以在定义参数时指定缺省值，
   
 	<#macro greet person color="black">  
 		<font size="+2" color="${color}">Hello ${person}!</font>  
 	</#macro>   
-这样<code><@greet person="Fred"/></code>就正确了，宏的参数是局部变量，只能在宏定义中有效。  
+这样`<@greet person="Fred"/>`就正确了，宏的参数是局部变量，只能在宏定义中有效。  
 
 ###22. 嵌套内容   
 用户定义指令可以有嵌套内容，使用<#nested>指令执行指令开始和结束标记之间的模板片  
