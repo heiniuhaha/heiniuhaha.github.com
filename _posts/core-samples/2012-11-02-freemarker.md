@@ -1,3 +1,11 @@
+---
+layout: post
+title : 	FreeMarker学习笔记
+description : FreeMarker 是一款模板引擎:一种基于模板的、用来生成输出文本的通用工具。包括数组列表、模板、表达式、内建函数、文本输出等常见用法。
+category : freemarker
+tags : [FreeMarker, ftl, 模板]
+---
+{% include JB/setup %}
 
 ###1.freemarker中Request,Session的用法：  
 java块:

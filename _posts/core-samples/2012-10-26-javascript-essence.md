@@ -1,3 +1,12 @@
+---
+layout: post
+title : 	javascript高级特性学习笔记
+description : javascript的面向对象、函数式编程、闭包、动态绑定、作用域等基础知识。
+category : javascript
+tags : [javascript, oop, prototype, 继承, 封装, 对象, 函数, 原型, 作用域, 闭包]
+---
+{% include JB/setup %}
+
 ##javascript高级特性学习笔记
 
 ###编程理念:
