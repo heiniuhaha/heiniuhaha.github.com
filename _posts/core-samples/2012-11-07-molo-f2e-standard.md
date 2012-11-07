@@ -2,7 +2,7 @@
 layout: post
 title : 	MOLO前端规范
 description : 正在制定一套MOLO前端规范，包括命名规范、注释规范、公共组件开发规范、HTML规范、CSS规范、JS规范
-category : 基础
+category : f2e
 tags : [前端规范]
 ---
 {% include JB/setup %}

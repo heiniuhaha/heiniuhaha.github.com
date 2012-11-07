@@ -3,13 +3,13 @@ layout: post
 title : 【转】jQuery 模块介绍与 jQuery 插件的深度模块化
 description : 我们可以通过简单封装，让 jQuery 与jQuery的插件 成为 seajs 的模块。这样，调用时只要 require 即可。转自玉伯 【jQuery 模块介绍与 jQuery 插件的深度模块化】,方便不能翻墙的同学查看。
 category : seajs
-tags : [jquery, jquery Plugin, $, seajs, 模块化, 代码组织, 性能优化]
+tags : [jquery, jqueryPlugin, seajs, 模块化, 代码组织, 性能优化]
 ---
 {% include JB/setup %}
 
 
 转自玉伯 [jQuery 模块介绍与 jQuery 插件的深度模块化](http://lifesinger.wordpress.com/2011/08/19/jquery-introduction-and-plugins-modulization/),方便不能翻墙的同学查看。
-##jQuery 模块
+##jQuery模块
 大名鼎鼎的 jQuery 就不多介绍了，详细介绍推荐官网：jquery.com
 阮一峰最近整理的文章也不错，推荐：[jQuery 设计思想](http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html), [jQuery 最佳实践](http://www.ruanyifeng.com/blog/2011/08/jquery_best_practices.html)
 
@@ -44,7 +44,7 @@ init.js:
 	  // do something with jQuery
 	});
 	
-##jQuery 插件的模块化
+##jQuery插件的模块化
 jQuery 提供了 DOM 操作功能，在实际应用中，我们还需要 cookie, template, storage 等等一系列功能。这时可以从 jQuery 社区中寻找各种插件来完成。大部分插件通过 jQuery 插件的模块化 一文中提供的方法封装就好。
 
 之前的封装方法，总结成一句话是：“jQuery 穿肠过，插件身上留”。正如 Kidwind 反馈的一样，每次“穿肠过”的时候都要运行一次插件代码，频繁调用某些插件时，会存在 CPU 浪费，还可能带来隐患：

@@ -9,7 +9,7 @@ tags : [ie, 异步加载, 无阻塞, 浏览器]
 
 有朋友问怎么让一个js文件只有是ie6的时候才加载，特记录下:
 
-###方式一：利用[if IE 6]的判断方式
+###方式一：利用`[if IE 6]`的判断方式
 
 ####code
 
@@ -19,7 +19,7 @@ tags : [ie, 异步加载, 无阻塞, 浏览器]
 
 缺点：阻塞加载
 
-####[if IE]的浏览器判断
+####`[if IE]`的浏览器判断
 
 	1. <!--[if !IE]>除IE外都可识别 <![endif]-->
 	2. <!--[if IE]> 所有的IE可识别 <![endif]-->
@@ -36,13 +36,13 @@ tags : [ie, 异步加载, 无阻塞, 浏览器]
 
 按原意是
 
->lt：less than 当前指定版本以下，不包含当前版本
+>`lt`：less than 当前指定版本以下，不包含当前版本
 
->gt：greater than 当前指定版本以上，不包含当前版本
+>`gt`：greater than 当前指定版本以上，不包含当前版本
 
->lte：less than or equal 当前指定版本以下，包含当前版本(等于)
+>`lte`：less than or equal 当前指定版本以下，包含当前版本(等于)
 
->gte：greater than or equal 当前指定版本以上，包含当前版本(等于)
+>`gte`：greater than or equal 当前指定版本以上，包含当前版本(等于)
 
 
 ###方式二：js判断浏览器版本再异步加载

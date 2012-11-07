@@ -236,12 +236,13 @@ The `content` variable holds the page/post content including any sub-template co
 Render the content variable wherever you want your main content to be injected into your template:
 
 {% capture text %}...
-<body>
-  <div id="sidebar"> ... </div>
-  <div id="main">
-    |.{content}.|
-  </div>
-</body>
+
+	<body>
+	  <div id="sidebar"> ... </div>
+	  <div id="main">
+	    |.{content}.|
+	  </div>
+	</body>
 ...{% endcapture %}
 {% include JB/liquid_raw %}
 
