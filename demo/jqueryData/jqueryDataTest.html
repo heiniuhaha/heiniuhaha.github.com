@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<body>
+<div id="J_Obj" data-role="page" data-hidden="true" data-options='{"name":"John"}' data-weight="100"></div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+var $obj = $("#J_Obj");
+console.log($obj.data("role") === "page");//String
+console.log($obj.data("hidden") === true);//Boolean
+console.log($obj.data("options").name === "John");//Object
+console.log($obj.data("weight") === 100);//Number
+</script>
+</body>
+</html>
