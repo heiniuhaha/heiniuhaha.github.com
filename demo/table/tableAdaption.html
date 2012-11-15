@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+
+		a{cursor:pointer;color:#1C94C4;}
+		.details{display:none;}
+		.details td{background-color:#eee;}
+		table{width:700px;border-spacing:0;border-collapse:collapse;}
+		table th,
+		table td{overflow:hidden;padding:25px 10px;width:60px;border:1px solid #ddd;word-wrap:break-word;word-break:break-all; }
+		.thead{position:relative;margin-bottom:-1px;}
+		.tscroll{height:250px;overflow-y:scroll;width:720px;}
+	</style>
+</head>
+<body>
+	<table class="thead">
+		<tr>
+			<th>日期</th>
+			<th>渠道号</th>
+			<th>渠道名称</th>
+			<th>收费类型</th>
+			<th>累计安装量</th>
+			<th>操作</th>
+		</tr>
+	</table>
+	<div  class="tscroll">
+		<table>
+			<tr>
+				<td>&nbsp;</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td><a class="oper" data-isopen="false" data-target="details0">展开</a></td>
+			</tr>
+			<tr class="details details0">
+				<td>002012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="details details0">
+				<td>002012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="details details0">
+				<td>002012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td><a class="oper" data-isopen="false" data-target="details1">展开</a></td>
+			</tr>
+			<tr class="details details1">
+				<td>112012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="details details1">
+				<td>112012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td><a class="oper" data-isopen="false" data-target="details2">展开</a></td>
+			</tr>
+			<tr class="details details2">
+				<td>222012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td><a class="oper" data-isopen="false" data-target="details3">展开</a></td>
+			</tr>
+			<tr class="details details3">
+				<td>3332012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td><a class="oper" data-isopen="false" data-target="details4">展开</a></td>
+			</tr>
+			<tr class="details details4">
+				<td>444432012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td><a class="oper" data-isopen="false" data-target="details5">展开</a></td>
+			</tr>
+			<tr class="details details5">
+				<td>555532012-10-11</td>
+				<td>990602</td>
+				<td>电脑管家6.8版本</td>
+				<td>---</td>
+				<td>---</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script>
+		$(".oper").click(function(){
+			var $this = $(this);
+			var $target = $("." + $this.data("target"));
+			console.log($target);
+			if($this.data("isopen")){
+				$target.css("display", "none");
+				$this.data("isopen", false);
+				$this.text("展开");
+			}else{
+				$target.css("display", "table-row");
+				$this.data("isopen", true);
+				$this.text("折叠");
+			}
+			
+		});
+	</script>
+</body>
+</html>

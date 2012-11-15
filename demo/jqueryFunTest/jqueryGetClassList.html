@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<title>获取class列表</title>
+</head>
+<body>
+<div class="class1">编号一</div>
+<div class="class2 class1">编号二</div>
+<div class="class1">编号三</div>
+<div class="class2 class1">编号四</div>
+<div class="class3 class2 class1">编号五</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+console.log($(".class1"));
+console.log($(".class1").length);
+console.log($(".class2"));
+console.log($(".class2").length);
+</script>
+</body>
+</html>

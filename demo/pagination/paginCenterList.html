@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="pagin.css"/>
+</head>
+<body>
+<div class="page-box"><div class="pagin inlineblock clearfix"  id="J_Pagin"></div></div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+	var hrefParam =  "href", mainHtml = "", prevHtml = "", nextHtml = "", prevIntervalHtml = "", nextIntervalHtml = "", pageListIndex, prevIndex, nextIndex;
+	var interval = 5; curPage = 6, pageCount = 18, $pagin = $("#J_Pagin"), pageArr = [], prevHtmlA = "", prevHtmlSpan = "", prevIntervalHtml = "", nextIntervalHtml = "";
+	function getLeftPage(){
+		var count = 0, leftPageArr = [];
+		for(var i = curPage - 1; i >= 1; i--){
+			count ++;
+			leftPageArr.push(i);
+			if(count >= interval){
+				break;
+			}
+		}
+		
+		return {count : count, pageArr : leftPageArr};
+	}
+	function getRightPage(){
+		var count = 0, rightPageArr = [];
+		for(var j = curPage + 1; j <= pageCount; j++){
+			count ++;
+			rightPageArr.push(j);
+			if(count >= interval){
+				break;
+			}
+		}
+		return {count : count, pageArr : rightPageArr};;
+	}
+	var pageArr = [],
+		leftPageCount = getLeftPage().count;
+		rightPageCount = getRightPage().count;
+	
+	//console.log("leftPageCount:" + leftPageCount);
+	//console.log("rightPageCount:" + rightPageCount);
+	
+	/**
+	* 生成按钮的html
+	* @param page 页码
+	* @param tag 标签值，a或span
+	* @param type  页码类型：上一页prev | 下一页next | 上一排prevInterval | 下一排nextInterval | 当前current
+	*/
+	function getPageHtml(page, tag, type){
+		var className = "",
+			text = "",
+			html;
+		switch(type){
+			case "prev" : 
+				className = "prev";
+				text = "&lt;";
+				break
+			case "next" :
+				className = "next";
+				text = "&gt;";
+				break;
+			case "prevInterval" : 
+				className = "interval";
+				text = "&lt;&lt;";
+				break;
+			case "nextInterval" : 
+				className = "interval";
+				text = "&gt;&gt;";
+				break;
+			case "current" : 
+				className = "current";
+				text = page;
+				break;
+			default : //普通的链接页码
+				className = "";
+				text = page;
+		}
+		html = (tag === "a") ? '<a class="' + className + '" ' + hrefParam + '="#p=' + page + '">' + text + '</a>' : '<span class="' + className + '">' + text + '</span>';
+		return html;
+	}
+
+	//总页数少于5个	
+	if(parseInt(leftPageCount + rightPageCount) < interval){
+		pageArr = getLeftPage().pageArr.reverse().concat(curPage).concat(getRightPage().pageArr);
+		console.log("总页数少于5个：" + pageArr);
+	}else{
+		//页数左两个，右两个
+		if(leftPageCount >=2 && rightPageCount >= 2){
+			pageArr = getLeftPage().pageArr.slice(0, 2).reverse().concat(curPage).concat(getRightPage().pageArr.slice(0, 2));
+			//console.log("两边都两个：" + pageArr);
+		}else{
+			var diff = leftPageCount - rightPageCount;
+			//左边页数多
+			if(diff >= 0){
+				pageArr = getLeftPage().pageArr.slice(0, interval - rightPageCount - 1).reverse().concat(curPage).concat(getRightPage().pageArr);
+				//console.log("左边多页码：" + pageArr);
+			//右边页数多
+			}else{
+				pageArr = getLeftPage().pageArr.reverse().concat(curPage).concat(getRightPage().pageArr.slice(0, interval - leftPageCount - 1));
+				//console.log("右边多页码：" + pageArr);
+			}	
+		}
+	}
+	
+	//生成分页列表
+	prevHtml = (leftPageCount > 0) ? getPageHtml(curPage - 1, "a", "prev") : getPageHtml(curPage - 1, "span", "prev");
+	nextHtml = (rightPageCount > 0) ? getPageHtml(curPage + 1, "a", "next") : getPageHtml(curPage + 1, "span", "next");
+	prevIntervalHtml = (leftPageCount >= interval) ? getPageHtml(curPage - interval, "a", "prevInterval") : getPageHtml(curPage - interval, "span", "prevInterval");
+	nextIntervalHtml = (rightPageCount >= interval) ? getPageHtml(curPage + interval, "a", "nextInterval") : getPageHtml(curPage + interval, "span", "nextInterval");
+	$.map(pageArr, function(n, i){
+		if(n != curPage){
+			mainHtml += getPageHtml(n, "a");
+		}else{
+			mainHtml += getPageHtml(n, "span", "current");
+		}
+	});
+	/*
+	console.log("prevHtml:" + prevHtml);
+	console.log("nextHtml:" + nextHtml);
+	console.log("prevIntervalHtml:" + prevIntervalHtml);
+	console.log("nextIntervalHtml:" + nextIntervalHtml);
+	console.log("mainHtml:" + mainHtml);
+	*/
+	$pagin.html(prevIntervalHtml + prevHtml + mainHtml + nextHtml + nextIntervalHtml);
+</script>
+</body>
+</html>
