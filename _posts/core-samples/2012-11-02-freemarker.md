@@ -32,21 +32,14 @@ freemarker代码：
 	</#if>  
 但是如果他们都设有相同的key值，那么在页面中显示的话，就就应该把他们加上去。  
 
-###2.freemarker中导入样式表的写法，javascript的写法注意：  
-引入样式表：
-	
-	<link href="*.css" type=text/css rel=stylesheet>  
+###2.freemarker获取字数 
 
-添加样式表：  
-	
-	<style type="text/css">  
-      .imgs img{width:150px ; height:70px;}  
-	</style>  
-javascript块:  
-	
-	<script>  
-       function method(para){}  
-	</script>  
+	<#assign content=root.keyWord>
+    ${content?subString(0,100)}
+    
+或
+
+    ${root.keyWord[0..100]} 
 
 ###3.判断集合：  
 集合的集合： 
