@@ -1,0 +1,777 @@
+<!doctype html>
+<html>
+<head>
+<title>angularjs 1.2.6 nav</title>
+<base href="http://docs.angularjs.org/">
+<link href="http://docs.angularjs.org/css/docs.css" type="text/css" rel="stylesheet"/>
+<style type="text/css">
+/*
+*{font-family: monaco;}
+  ul,li{list-style: none;line-height: 30px;}
+  .side-navigation{column-count: 3;column-gap: 40px;column-rule:3px outset #ff00ff;}
+  .section{padding-top: 60px;padding-bottom: 20px;}
+
+  .api-list-item{border: 5px solid #ddd;padding:15px;}
+  .guide{font-size: 20px;}
+  */
+  .nav-header:after{content:"";height: 0;overflow: hidden;zoom:1;}
+  a:link{text-decoration: none;}
+  ul,li{list-style: none;padding:0;margin:0;font-family: monaco;}
+  .side-navigation{width: 300px;padding:0 20px;border: 5px solid #ddd;margin-bottom: 200px;}
+  *,
+  .side-navigation .well{}
+  .side-navigation .well li{line-height: 40px;}
+  .side-navigation .code{font-size: 18px;}
+  .side-navigation > ul.nav > li.section{min-height: 40px;}
+  .side-navigation .well .nav-header a{margin-right: 20px;margin-left:20px;}
+</style>
+</head>
+<body>
+<div class="side-navigation">
+            <ul class="nav nav-list" ng-hide="page">
+              <!-- ngRepeat: page in pages track by page.url -->
+            </ul>
+
+            <!-- ngRepeat: namespace in namespaces track by namespace.url -->
+
+            <!-- ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ng">ng</a>
+              </li>
+
+              <li class="nav-header section" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:a" tabindex="2" class="ng-binding">a</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:form" tabindex="2" class="ng-binding">form</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:input" tabindex="2" class="ng-binding">input</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:input.checkbox" tabindex="2" class="ng-binding">input.checkbox</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:input.email" tabindex="2" class="ng-binding">input.email</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:input.number" tabindex="2" class="ng-binding">input.number</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:input.radio" tabindex="2" class="ng-binding">input.radio</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:input.text" tabindex="2" class="ng-binding">input.text</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:input.url" tabindex="2" class="ng-binding">input.url</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngApp" tabindex="2" class="ng-binding">ngApp</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngBind" tabindex="2" class="ng-binding">ngBind</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngBindHtml" tabindex="2" class="ng-binding">ngBindHtml</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngBindTemplate" tabindex="2" class="ng-binding">ngBindTemplate</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngBlur" tabindex="2" class="ng-binding">ngBlur</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngChange" tabindex="2" class="ng-binding">ngChange</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngChecked" tabindex="2" class="ng-binding">ngChecked</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngClass" tabindex="2" class="ng-binding">ngClass</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngClassEven" tabindex="2" class="ng-binding">ngClassEven</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngClassOdd" tabindex="2" class="ng-binding">ngClassOdd</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngClick" tabindex="2" class="ng-binding">ngClick</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngCloak" tabindex="2" class="ng-binding">ngCloak</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngController" tabindex="2" class="ng-binding">ngController</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngCopy" tabindex="2" class="ng-binding">ngCopy</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngCsp" tabindex="2" class="ng-binding">ngCsp</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngCut" tabindex="2" class="ng-binding">ngCut</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngDblclick" tabindex="2" class="ng-binding">ngDblclick</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngDisabled" tabindex="2" class="ng-binding">ngDisabled</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngFocus" tabindex="2" class="ng-binding">ngFocus</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngForm" tabindex="2" class="ng-binding">ngForm</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngHide" tabindex="2" class="ng-binding">ngHide</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngHref" tabindex="2" class="ng-binding">ngHref</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngIf" tabindex="2" class="ng-binding">ngIf</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngInclude" tabindex="2" class="ng-binding">ngInclude</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngInit" tabindex="2" class="ng-binding">ngInit</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngKeydown" tabindex="2" class="ng-binding">ngKeydown</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngKeypress" tabindex="2" class="ng-binding">ngKeypress</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngKeyup" tabindex="2" class="ng-binding">ngKeyup</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngList" tabindex="2" class="ng-binding">ngList</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngModel" tabindex="2" class="ng-binding">ngModel</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngMousedown" tabindex="2" class="ng-binding">ngMousedown</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngMouseenter" tabindex="2" class="ng-binding">ngMouseenter</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngMouseleave" tabindex="2" class="ng-binding">ngMouseleave</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngMousemove" tabindex="2" class="ng-binding">ngMousemove</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngMouseover" tabindex="2" class="ng-binding">ngMouseover</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngMouseup" tabindex="2" class="ng-binding">ngMouseup</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngNonBindable" tabindex="2" class="ng-binding">ngNonBindable</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngOpen" tabindex="2" class="ng-binding">ngOpen</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngPaste" tabindex="2" class="ng-binding">ngPaste</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngPluralize" tabindex="2" class="ng-binding">ngPluralize</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngReadonly" tabindex="2" class="ng-binding">ngReadonly</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngRepeat" tabindex="2" class="ng-binding">ngRepeat</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngSelected" tabindex="2" class="ng-binding">ngSelected</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngShow" tabindex="2" class="ng-binding">ngShow</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngSrc" tabindex="2" class="ng-binding">ngSrc</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngSrcset" tabindex="2" class="ng-binding">ngSrcset</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngStyle" tabindex="2" class="ng-binding">ngStyle</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngSubmit" tabindex="2" class="ng-binding">ngSubmit</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngSwitch" tabindex="2" class="ng-binding">ngSwitch</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngTransclude" tabindex="2" class="ng-binding">ngTransclude</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:ngValue" tabindex="2" class="ng-binding">ngValue</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:script" tabindex="2" class="ng-binding">script</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:select" tabindex="2" class="ng-binding">select</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/ng.directive:textarea" tabindex="2" class="ng-binding">textarea</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:currency" tabindex="2" class="ng-binding">currency</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:date" tabindex="2" class="ng-binding">date</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:filter" tabindex="2" class="ng-binding">filter</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:json" tabindex="2" class="ng-binding">json</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:limitTo" tabindex="2" class="ng-binding">limitTo</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:lowercase" tabindex="2" class="ng-binding">lowercase</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:number" tabindex="2" class="ng-binding">number</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.filter:orderBy" tabindex="2" class="ng-binding">orderBy</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/ng.filter:uppercase" tabindex="2" class="ng-binding">uppercase</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$anchorScroll" tabindex="2" class="ng-binding">$anchorScroll</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$animateProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$animate" tabindex="2" class="ng-binding">$animate</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$cacheFactory" tabindex="2" class="ng-binding">$cacheFactory</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$compileProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$compile" tabindex="2" class="ng-binding">$compile</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$controllerProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$controller" tabindex="2" class="ng-binding">$controller</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$document" tabindex="2" class="ng-binding">$document</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$exceptionHandler" tabindex="2" class="ng-binding">$exceptionHandler</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$filterProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$filter" tabindex="2" class="ng-binding">$filter</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$http" tabindex="2" class="ng-binding">$http</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$httpBackend" tabindex="2" class="ng-binding">$httpBackend</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$interpolateProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$interpolate" tabindex="2" class="ng-binding">$interpolate</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$interval" tabindex="2" class="ng-binding">$interval</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$locale" tabindex="2" class="ng-binding">$locale</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$locationProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$location" tabindex="2" class="ng-binding">$location</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$logProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$log" tabindex="2" class="ng-binding">$log</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$parseProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$parse" tabindex="2" class="ng-binding">$parse</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$q" tabindex="2" class="ng-binding">$q</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$rootElement" tabindex="2" class="ng-binding">$rootElement</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$rootScopeProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$rootScope" tabindex="2" class="ng-binding">$rootScope</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$sceProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$sce" tabindex="2" class="ng-binding">$sce</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ng.$sceDelegateProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$sceDelegate" tabindex="2" class="ng-binding">$sceDelegate</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$templateCache" tabindex="2" class="ng-binding">$templateCache</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$timeout" tabindex="2" class="ng-binding">$timeout</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ng.$window" tabindex="2" class="ng-binding">$window</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url --><li ng-repeat="page in module.types track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.Module" tabindex="2" class="ng-binding">angular.Module</a>
+              </li><!-- end ngRepeat: page in module.types track by page.url --><li ng-repeat="page in module.types track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.$compile.directive.Attributes" tabindex="2" class="ng-binding">ng.$compile.directive.Attributes</a>
+              </li><!-- end ngRepeat: page in module.types track by page.url --><li ng-repeat="page in module.types track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.$rootScope.Scope" tabindex="2" class="ng-binding">ng.$rootScope.Scope</a>
+              </li><!-- end ngRepeat: page in module.types track by page.url --><li ng-repeat="page in module.types track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ng.directive:form.FormController" tabindex="2" class="ng-binding">form.FormController</a>
+              </li><!-- end ngRepeat: page in module.types track by page.url --><li ng-repeat="page in module.types track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/ng.directive:ngModel.NgModelController" tabindex="2" class="ng-binding">ngModel.NgModelController</a>
+              </li><!-- end ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.bind" tabindex="2" class="ng-binding">angular.bind</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.bootstrap" tabindex="2" class="ng-binding">angular.bootstrap</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.copy" tabindex="2" class="ng-binding">angular.copy</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.element" tabindex="2" class="ng-binding">angular.element</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.equals" tabindex="2" class="ng-binding">angular.equals</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.extend" tabindex="2" class="ng-binding">angular.extend</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.forEach" tabindex="2" class="ng-binding">angular.forEach</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.fromJson" tabindex="2" class="ng-binding">angular.fromJson</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.identity" tabindex="2" class="ng-binding">angular.identity</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.injector" tabindex="2" class="ng-binding">angular.injector</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isArray" tabindex="2" class="ng-binding">angular.isArray</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isDate" tabindex="2" class="ng-binding">angular.isDate</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isDefined" tabindex="2" class="ng-binding">angular.isDefined</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isElement" tabindex="2" class="ng-binding">angular.isElement</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isFunction" tabindex="2" class="ng-binding">angular.isFunction</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isNumber" tabindex="2" class="ng-binding">angular.isNumber</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isObject" tabindex="2" class="ng-binding">angular.isObject</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isString" tabindex="2" class="ng-binding">angular.isString</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.isUndefined" tabindex="2" class="ng-binding">angular.isUndefined</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.lowercase" tabindex="2" class="ng-binding">angular.lowercase</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.mock" tabindex="2" class="ng-binding">angular.mock</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.module" tabindex="2" class="ng-binding">angular.module</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.noop" tabindex="2" class="ng-binding">angular.noop</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.toJson" tabindex="2" class="ng-binding">angular.toJson</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.uppercase" tabindex="2" class="ng-binding">angular.uppercase</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/angular.version" tabindex="2" class="ng-binding">angular.version</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngMock">ngMock</a>
+              </li>
+
+              <li class="nav-header section ng-hide" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ngMock.$exceptionHandlerProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngMock.$exceptionHandler" tabindex="2" class="ng-binding">$exceptionHandler</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngMock.$httpBackend" tabindex="2" class="ng-binding">$httpBackend</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngMock.$interval" tabindex="2" class="ng-binding">$interval</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngMock.$log" tabindex="2" class="ng-binding">$log</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngMock.$timeout" tabindex="2" class="ng-binding">$timeout</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.mock.dump" tabindex="2" class="ng-binding">angular.mock.dump</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.mock.inject" tabindex="2" class="ng-binding">angular.mock.inject</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/angular.mock.module" tabindex="2" class="ng-binding">angular.mock.module</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url --><li ng-repeat="page in module.globals track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/angular.mock.TzDate" tabindex="2" class="ng-binding">angular.mock.TzDate</a>
+              </li><!-- end ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/AUTO">AUTO</a>
+              </li>
+
+              <li class="nav-header section ng-hide" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/AUTO.$injector" tabindex="2" class="ng-binding">$injector</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/AUTO.$provide" tabindex="2" class="ng-binding">$provide</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngAnimate">ngAnimate</a>
+              </li>
+
+              <li class="nav-header section ng-hide" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right" href="api/ngAnimate.$animateProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngAnimate.$animate" tabindex="2" class="ng-binding">$animate</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngCookies">ngCookies</a>
+              </li>
+
+              <li class="nav-header section ng-hide" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngCookies.$cookies" tabindex="2" class="ng-binding">$cookies</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngCookies.$cookieStore" tabindex="2" class="ng-binding">$cookieStore</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngMockE2E">ngMockE2E</a>
+              </li>
+
+              <li class="nav-header section ng-hide" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngMockE2E.$httpBackend" tabindex="2" class="ng-binding">$httpBackend</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngResource">ngResource</a>
+              </li>
+
+              <li class="nav-header section ng-hide" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngResource.$resource" tabindex="2" class="ng-binding">$resource</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngRoute">ngRoute</a>
+              </li>
+
+              <li class="nav-header section" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/ngRoute.directive:ngView" tabindex="2" class="ng-binding">ngView</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope">
+                <a ng-show="service.provider" class="pull-right" href="api/ngRoute.$routeProvider" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngRoute.$route" tabindex="2" class="ng-binding">$route</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngRoute.$routeParams" tabindex="2" class="ng-binding">$routeParams</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngSanitize">ngSanitize</a>
+              </li>
+
+              <li class="nav-header section ng-hide" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url --><li ng-repeat="page in module.filters track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/ngSanitize.filter:linky" tabindex="2" class="ng-binding">linky</a>
+              </li><!-- end ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngSanitize.$sanitize" tabindex="2" class="ng-binding">$sanitize</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url --><ul class="nav nav-list well api-list-item ng-scope" ng-repeat="module in modules track by module.url">
+              <li class="nav-header module">
+                <a class="guide" href="guide/module">module</a>
+                <a class="code ng-binding" href="api/ngTouch">ngTouch</a>
+              </li>
+
+              <li class="nav-header section" ng-show="module.directives">
+                <a href="guide/directive" class="guide">directive</a>
+              </li>
+              <!-- ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ngTouch.directive:ngClick" tabindex="2" class="ng-binding">ngClick</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="api/ngTouch.directive:ngSwipeLeft" tabindex="2" class="ng-binding">ngSwipeLeft</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url --><li ng-repeat="page in module.directives track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="api/ngTouch.directive:ngSwipeRight" tabindex="2" class="ng-binding">ngSwipeRight</a>
+              </li><!-- end ngRepeat: page in module.directives track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.filters">
+                <a href="guide/dev_guide.templates.filters" class="guide">filter</a>
+              </li>
+              <!-- ngRepeat: page in module.filters track by page.url -->
+
+              <li class="nav-header section" ng-show="module.services">
+                <a href="guide/dev_guide.services" class="guide">service</a>
+              </li>
+              <!-- ngRepeat: service in module.services track by service.instance.url --><li ng-repeat="service in module.services track by service.instance.url" ng-class="navClass(service.instance, service.provider)" class="api-list-item ng-scope last">
+                <a ng-show="service.provider" class="pull-right ng-hide" href="" tabindex="2"><i class="icon-cog"></i></a>
+                <a href="api/ngTouch.$swipe" tabindex="2" class="ng-binding">$swipe</a>
+              </li><!-- end ngRepeat: service in module.services track by service.instance.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.types">
+                <a href="guide/types" class="guide">Types</a>
+              </li>
+              <!-- ngRepeat: page in module.types track by page.url -->
+
+              <li class="nav-header section ng-hide" ng-show="module.globals">
+                <a href="" class="global guide">global APIs</a>
+                &nbsp;
+              </li>
+              <!-- ngRepeat: page in module.globals track by page.url -->
+
+            </ul><!-- end ngRepeat: module in modules track by module.url -->
+
+          </div>
+
+
+<div class="side-navigation">
+            <ul class="nav nav-list" ng-hide="page">
+              <!-- ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/controller" tabindex="2" class="ng-binding">Controllers</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/filter" tabindex="2" class="ng-binding">Filters</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/templates" tabindex="2" class="ng-binding">Templates</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/introduction" tabindex="2" class="ng-binding">Introduction</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/concepts" tabindex="2" class="ng-binding">Conceptual Overview</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.services.understanding_services" tabindex="2" class="ng-binding">Understanding Angular Services</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.services.managing_dependencies" tabindex="2" class="ng-binding">Managing Service Dependencies</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.services.creating_services" tabindex="2" class="ng-binding">Creating Services</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.services.injecting_controllers" tabindex="2" class="ng-binding">Injecting Services Into Controllers</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.services.testing_services" tabindex="2" class="ng-binding">Testing Angular Services</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.services.$location" tabindex="2" class="ng-binding">Using $location</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.services" tabindex="2" class="ng-binding">Angular Services</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/databinding" tabindex="2" class="ng-binding">Data Binding</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.templates.css-styling" tabindex="2" class="ng-binding">Working With CSS in Angular</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/di" tabindex="2" class="ng-binding">Dependency Injection</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/providers" tabindex="2" class="ng-binding">Providers</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/module" tabindex="2" class="ng-binding">Modules</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/scope" tabindex="2" class="ng-binding">Scopes</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/expression" tabindex="2" class="ng-binding">Expressions</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/bootstrap" tabindex="2" class="ng-binding">Bootstrap</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/directive" tabindex="2" class="ng-binding">Directives</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/compiler" tabindex="2" class="ng-binding">HTML Compiler</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/forms" tabindex="2" class="ng-binding">Forms</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/animations" tabindex="2" class="ng-binding">Animations</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.e2e-testing" tabindex="2" class="ng-binding">E2E Testing</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/dev_guide.unit-testing" tabindex="2" class="ng-binding">Unit Testing</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/i18n" tabindex="2" class="ng-binding">i18n and l10n</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope">
+                <a href="guide/ie" tabindex="2" class="ng-binding">Internet Explorer Compatibility</a>
+              </li><!-- end ngRepeat: page in pages track by page.url --><li ng-repeat="page in pages track by page.url" ng-class="navClass(page)" class="api-list-item ng-scope last">
+                <a href="guide/migration" tabindex="2" class="ng-binding">Migrating from 1.0 to 1.2</a>
+              </li><!-- end ngRepeat: page in pages track by page.url -->
+            </ul>
+
+            <!-- ngRepeat: namespace in namespaces track by namespace.url -->
+
+            <!-- ngRepeat: module in modules track by module.url -->
+
+          </div>
+
+
+        </body>
+        </html>
